@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Liny - Subscribe</title>
+<!-- general css -->
+<link href="css/blitzer/jquery-ui.css" type="text/css" rel="stylesheet" />
+<link href="css/app/portrait.css" rel="stylesheet" type="text/css" />
+<!-- edit_css -->
+<link href="css/app/portrait/edit.css" rel="stylesheet" type="text/css" />
+<!-- subscribe_css -->
+<link href="css/app/portrait/subscribe.css" rel="stylesheet" type="text/css" />
+<!--<link href="css/app/landscape/subscribe.css" rel="stylesheet" type="text/css" media="only screen and (max-width:720px)" />-->
+
+<script charset="utf-8" src="js/cordova.js"></script>
+</head>
+<body>
+<div class="container">
+	<div id='fb-banner'>Nous avons besoin de vous, <a style="color: #98d3f4; margin-right: 10px;" href="mailto:feedback@liny.info">donnez-nous vos impressions!</a></div>
+  <div class="content">
+  	<form id="form_register" method="post" action="#">
+		<fieldset id="connection_frame">
+      <legend data-i18n="subscribe.legend.connection">Connection</legend>
+      <input id="email" name="email" title="Email" placeholder="Email" type="email" data-i18n="[placeholder]subscribe.email" />
+			<div class="check"></div>
+      <input id="password" name="password" title="Password" placeholder="Password" type="password" data-i18n="[placeholder]subscribe.password" />
+			<div class="check"></div>
+			<div style="clear:both;"></div>
+    <!-- end connection_frame--></fieldset>
+        <fieldset id="profile_frame">
+        	<legend data-i18n="subscribe.legend.profile">Profile</legend>
+        	<input id="firstname" name="firstname" title="Firstname" placeholder="Firstname" type="text" data-i18n="[placeholder]subscribe.firstname" />
+					<div class="check"></div>
+          <input id="lastname" name="lastname" title="lastname" placeholder="lastname" type="text"  data-i18n="[placeholder]subscribe.lastname" />
+					<div class="check"></div>
+					<div style="clear:both;"></div>
+            <div id="genderBox">
+            	<strong data-i18n="subscribe.gender.title" >Gender</strong><br />
+              <div id="woman" class="sign_woman" data-i18n="subscribe.gender.woman" >woman</div>
+              <div id="man" class="sign_man_blank" data-i18n="subscribe.gender.man">man</div>
+							<input id="gender" type="hidden" name="gender" value="woman" />
+            <!-- end genderBox --></div>
+            <input id="birthdate" name="birthdate" title="Birthdate" placeholder="Birthdate" type="text" data-i18n="[placeholder]subscribe.birthdate" class="box_birthdate" />
+						<div class="check"></div>
+        <!-- end profile_frame --></fieldset>
+  	<!-- end form_register --></form>
+  <!-- end .content --></div>
+  
+  <div class="footer">
+    <p>Copyright & co</p>
+    <!-- end .footer --></div>
+    <div id="menu" class="menu">  
+        <div class="ico_cancel menu_edit_child">
+            <a href="index.html" title="Cancel"><span class="spanlinks"></span></a>
+        <!-- end ico_cancel --></div>
+        
+        <div class="ico_save menu_edit_child">
+            <a href="#" title="Register" data-i18n="subscribe.submit">register</a><a href="#" title="Register"><span class="spanlinks"></span></a>
+        <!-- end ico_save --></div>
+        
+        <div id="ico_home" class="ico_home menu_child" data-i18n="subscribe.title">Subscribe</div>
+  
+  <!-- end menu --></div>
+<!-- end .container --></div>
+<script src="js/jquery.js"></script>
+<script src="js/i18next.js"></script>
+<script src="js/user.class.js"></script>
+<script src="js/communication.class.js"></script>
+<script src="js/lang.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/sign_switcher.js"></script>
+<script src="js/preload.js"></script>
+<script src="js/page.subscribe.js"></script>
+</body>
+</html>

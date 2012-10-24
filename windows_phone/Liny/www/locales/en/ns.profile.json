@@ -1,0 +1,137 @@
+{
+    "general": {
+        "submit": "Submit",
+        "title": "Edit",
+        "avatar_button": "Edit",
+        "email": "Email",
+        "password": "Password",
+        "birthdate": "Birthdate",
+		"years": "Y. O.",
+        "firstname": "Firstname",
+        "lastname": "Lastname"
+    },
+    "personality": {
+        "title": "Personality",
+        "relationship": {
+			"title" : "Relationship",
+			"serious" : "Serious",
+			"ephemeral" : "Ephemeral",
+			"libertin" : "Libertin"
+		},
+        "sports": "Sports",
+        "music": "Music",
+        "movies": "Movies",
+        "books": "Books",
+        "hobbies": "Hobbies",
+        "studies": "Studies",
+        "job": "Job",
+        "lang": "Spoken languages",
+		"comment": {
+			"sports": "Add sports...",
+			"music": "Add bands, singers, ...",
+	        "movies": "Add movies...",
+	        "books": "Add books, comics, magazines, ...",
+	        "hobbies": "Add hobbies...",
+	        "studies": "Add schools, studies, ...",
+	        "job": "Add past or present jobs...",
+	        "lang": "Add languages you speak..."
+		},
+        "rate": {
+            "party": {
+				"title" : "Party",
+				"lvl0" : "never",
+				"lvl1" : "friend's place",
+				"lvl2" : "clubs",
+				"lvl3" : "3 party a week or more"
+			},
+			"alcohol": {
+				"title" : "Alcohol",
+				"lvl0" : "never",
+				"lvl1" : "from time to time",
+				"lvl2" : "every week",
+				"lvl3" : "lots"
+			},
+			"tobacco" : {
+				"title" : "Tobacco",
+				"lvl0" : "don't tolerate the smoke",
+				"lvl1" : "tolerate the smoke",
+				"lvl2" : "smoke from time to time",
+				"lvl3" : "every day",
+				"lvl4" : "1 pack a day or more"
+			}
+        },
+	"driving_license" : {
+		"title" : "Driving license",
+		"none": "none",
+		"car" : "car license",
+		"motorcycle" : "motorcycle license",
+		"both" : "car & motorcycle licenses"
+	},
+	"live_with" : {
+		"title": "Live with",
+		"parents": "live with parents",
+		"mates": "live with mates",
+		"alone": "live alone"
+	}
+    },
+    "physique": {
+        "title": "Physique",
+        "gender": {
+            "title": "Gender",
+            "woman": "Woman",
+            "man": "Man"
+        },
+        "color": {
+            "body": {
+                "eyes": "Eyes color",
+                "hair": "Hair color"
+            },
+            "black": "Black",
+            "blond": "Blond",
+            "blue": "Blue",
+            "brown": "Brown",
+            "grey": "Grey",
+            "white": "White",
+            "ginger": "Ginger",
+            "yellow": "Yellow",
+            "green": "Green"
+        },
+		"appearance" : {
+			"title": "Appearance",
+			"caucasian" : "Caucasian",
+			"mediterranean" : "Mediterranean",
+			"asian" : "Asian",
+			"african" : "African"
+		},
+		"height": "Height",
+		"weight": "Weight",
+        "rate": {
+            "piercing": {
+				"title" : "Piercing",
+				"lvl0" : "none",
+				"lvl1" : "1 - 2",
+				"lvl2" : "3 - 6",
+				"lvl3" : "lots"
+			},
+            "tatoo": {
+				"title" : "Tatouage",
+				"lvl0" : "none",
+				"lvl1" : "1 - 2",
+				"lvl2" : "3 - 6",
+				"lvl3" : "lots"
+			},
+			"haircut": {
+				"title" : "Haircut",
+				"lvl1" : "bold",
+				"lvl2" : "short",
+				"lvl3" : "medium",
+				"lvl4" : "long"
+			}
+        }
+    },
+	"edit": "Edit",
+	"lookingfor": "Looking for",
+	"ages_between": "Ages between:",
+	"ages_between_and": "and",
+	"msg_tap_face": "Tap on the face to switch selector"
+}

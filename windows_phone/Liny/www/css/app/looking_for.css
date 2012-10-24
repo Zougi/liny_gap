@@ -1,0 +1,55 @@
+/* looking for silhouettes woman/man style sheet */
+
+#lookingfor_man {
+	margin-left: 70px;	
+}
+
+.lookingfor_man {
+	position: relative;
+	display: inline-block;
+	white-space: nowrap;
+	background-image: url(images/profile/man/silhouette_lookingfor.png);
+	background-repeat: no-repeat;
+	background-size: 78px 189px;
+	width: 78px;
+	height: 189px;
+	cursor: pointer;
+}
+
+.lookingfor_man_blank {
+	position: relative;
+	display: inline-block;
+	white-space: nowrap;
+	background-image: url(images/profile/man/silhouette_lookingfor_blank.png);
+	background-repeat: no-repeat;
+	background-size: 78px 189px;
+	width: 78px;
+	height: 189px;
+}
+
+#lookingfor_woman {
+	margin-left: 70px;
+}
+
+.lookingfor_woman {
+	position: relative;
+	display: inline-block;
+	white-space: nowrap;
+	background-image: url(images/profile/woman/silhouette_lookingfor.png);
+	background-repeat: no-repeat;
+	background-size: 67px 188px;
+	width: 67px;
+	height: 188px;
+	cursor: pointer;
+}
+
+.lookingfor_woman_blank {
+	position: relative;
+	display: inline-block;
+	white-space: nowrap;
+	background-image: url(images/profile/woman/silhouette_lookingfor_blank.png);
+	background-repeat: no-repeat;
+	background-size: 67px 188px;
+	width: 67px;
+	height: 188px;
+}

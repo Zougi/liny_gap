@@ -1,0 +1,131 @@
+{
+    "general": {
+        "submit": "Enregistrer",
+        "title": "Edition",
+        "avatar_button": "Editer",
+        "email": "Mail",
+        "password": "Mot de passe",
+        "birthdate": "Date de naissance",
+	"years": "ans",
+        "firstname": "Prénom",
+        "lastname": "Nom"
+    },
+    "personality": {
+        "title": "Personalité",
+        "relationship": {
+			"title" : "Relation",
+			"serious" : "Sérieuse",
+			"ephemeral" : "Ephémère",
+			"libertin" : "Libertine"
+		},
+        "sports": "Sports",
+        "music": "Musique",
+        "movies": "Films",
+        "books": "Livres",
+        "hobbies": "Passe temps",
+        "studies": "Etudes",
+        "job": "Métiers",
+        "lang": "Langue",
+		"comment": {
+			"sports": "Ajouter des sports...",
+			"music": "Ajouter des groupes, chanteurs, ...",
+	        "movies": "Ajouter des films...",
+	        "books": "Ajouter des livres, BDs, magazines, ...",
+	        "hobbies": "Ajouter des passe temps...",
+	        "studies": "Ajouter école, études, ...",
+	        "job": "Ajouter jobs passés ou actuel...",
+	        "lang": "Ajouter des langues parlées..."
+		},
+        "rate": {
+            "party": {
+				"title" : "Soirées",
+				"lvl0" : "jamais",
+				"lvl1" : "chez des amis",
+				"lvl2" : "clubs",
+				"lvl3" : "3 soirées la semaine ou plus"
+			},
+			"alcohol": {
+				"title" : "Alcool",
+				"lvl0" : "jamais",
+				"lvl1" : "de temps en temps",
+				"lvl2" : "toutes les semaines",
+				"lvl3" : "beaucoup"
+			},
+			"tobacco" : {
+				"title" : "Tabac",
+				"lvl0" : "ne tolère pas la fumée",
+				"lvl1" : "tolère la fumée",
+				"lvl2" : "fume de temps en temps",
+				"lvl3" : "fume souvent",
+				"lvl4" : "fume plus d'1 paquet/jour"
+			}
+        },
+		"driving_license" : {
+			"title" : "Permis de conduire",
+			"car" : "Permis voiture",
+			"motorcycle" : "Permis moto",
+			"both" : "Permis voiture et moto"
+		}
+    },
+    "physique": {
+        "title": "Physique",
+        "gender": {
+            "title": "Genre",
+            "woman": "femme",
+            "man": "homme"
+        },
+        "color": {
+            "body": {
+                "eyes": "Couleur des yeux",
+                "hair": "Couleur de cheveux"
+            },
+            "black": "Noir",
+            "blond": "Blond",
+            "blue": "Bleu",
+            "brown": "Brun",
+            "grey": "Gris",
+            "white": "Blanc",
+            "ginger": "Roux",
+            "yellow": "Jaune",
+            "green": "Vert"
+        },
+		"appearance" : {
+			"caucasian" : "caucasien",
+			"mediterranean" : "mediterranéen",
+			"asian" : "asiatique",
+			"african" : "africain"
+		},
+		"height": "Taille",
+		"weight": "Poids",
+        "rate": {
+            "piercing": {
+				"title" : "Piercing",
+				"lvl0" : "aucun",
+				"lvl1" : "1 - 2",
+				"lvl2" : "3 - 6",
+				"lvl3" : "Beaucoup"
+			},
+            "tatoo": {
+				"title" : "Tatouage",
+				"lvl0" : "aucun",
+				"lvl1" : "1 - 2",
+				"lvl2" : "3 - 6",
+				"lvl3" : "Beaucoup"
+			},
+			"haircut": {
+				"title" : "Coupe de cheveux",
+				"lvl1" : "chauve",
+				"lvl2" : "court",
+				"lvl3" : "semi-long",
+				"lvl4" : "long"
+			}
+        }
+    },
+	"edit": "Edit.",
+	"lookingfor": "Recherche",
+	"button" : {
+		"search" : "Rechercher",
+		"infos" : "Infos",
+		"deny" : "Refus"
+	}
+}

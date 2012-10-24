@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License. 
+-->
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B32EA25-C186-4725-AE87-6D1BE3B0C9CF}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Liny</RootNamespace>
+    <AssemblyName>Liny</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Liny.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Liny.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Devices.Sensors" />
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Servicemodel.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cordovalib\BrowserMouseHelper.cs" />
+    <Compile Include="cordovalib\CommandFactory.cs" />
+    <Compile Include="cordovalib\Commands\Accelerometer.cs" />
+    <Compile Include="cordovalib\Commands\AudioPlayer.cs" />
+    <Compile Include="cordovalib\Commands\BaseCommand.cs" />
+    <Compile Include="cordovalib\Commands\Battery.cs" />
+    <Compile Include="cordovalib\Commands\Camera.cs" />
+    <Compile Include="cordovalib\Commands\Capture.cs" />
+    <Compile Include="cordovalib\Commands\Compass.cs" />
+    <Compile Include="cordovalib\Commands\Contacts.cs" />
+    <Compile Include="cordovalib\Commands\DebugConsole.cs" />
+    <Compile Include="cordovalib\Commands\Device.cs" />
+    <Compile Include="cordovalib\Commands\File.cs" />
+    <Compile Include="cordovalib\Commands\FileTransfer.cs" />
+    <Compile Include="cordovalib\Commands\GeoLocation.cs" />
+    <Compile Include="cordovalib\Commands\ImageExifHelper.cs" />
+    <Compile Include="cordovalib\Commands\Media.cs" />
+    <Compile Include="cordovalib\Commands\MimeTypeMapper.cs" />
+    <Compile Include="cordovalib\Commands\NetworkStatus.cs" />
+    <Compile Include="cordovalib\Commands\Notification.cs" />
+    <Compile Include="cordovalib\CordovaCommandCall.cs" />
+    <Compile Include="cordovalib\CordovaView.xaml.cs">
+      <DependentUpon>CordovaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cordovalib\DOMStorageHelper.cs" />
+    <Compile Include="cordovalib\JSON\JsonHelper.cs" />
+    <Compile Include="cordovalib\NativeExecution.cs" />
+    <Compile Include="cordovalib\OrientationHelper.cs" />
+    <Compile Include="cordovalib\PluginResult.cs" />
+    <Compile Include="cordovalib\ScriptCallback.cs" />
+    <Compile Include="cordovalib\UI\AudioCaptureTask.cs" />
+    <Compile Include="cordovalib\UI\AudioRecorder.xaml.cs">
+      <DependentUpon>AudioRecorder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cordovalib\UI\ImageCapture.xaml.cs">
+      <DependentUpon>ImageCapture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cordovalib\UI\NotificationBox.xaml.cs">
+      <DependentUpon>NotificationBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cordovalib\UI\VideoCaptureTask.cs" />
+    <Compile Include="cordovalib\UI\VideoRecorder.xaml.cs">
+      <DependentUpon>VideoRecorder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="cordovalib\CordovaView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="cordovalib\UI\AudioRecorder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="cordovalib\UI\ImageCapture.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="cordovalib\UI\NotificationBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="cordovalib\UI\VideoRecorder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\notification-beep.wav" />
+    <Content Include="www\about.html" />
+    <Content Include="www\chat.html" />
+    <Content Include="www\contacts.html" />
+    <None Include="www\css\app\images\profile\man\hair_medium\see womain hair_short" />
+    <None Include="www\locales\en\ns.about.json" />
+    <None Include="www\locales\en\ns.contacts.json" />
+    <None Include="www\locales\en\ns.general.json" />
+    <None Include="www\locales\en\ns.home.json" />
+    <None Include="www\locales\en\ns.menu.json" />
+    <None Include="www\locales\en\ns.profile.json" />
+    <None Include="www\locales\en\ns.settings.json" />
+    <None Include="www\locales\fr\ns.about.json" />
+    <None Include="www\locales\fr\ns.contacts.json" />
+    <None Include="www\locales\fr\ns.general.json" />
+    <None Include="www\locales\fr\ns.home.json" />
+    <None Include="www\locales\fr\ns.menu.json" />
+    <None Include="www\locales\fr\ns.profile.json" />
+    <None Include="www\locales\fr\ns.settings.json" />
+    <Resource Include="www\css\ibutton\images\ibutton-slider-default.png" />
+    <Resource Include="www\css\ibutton\images\ibutton-slider-giva-original.png" />
+    <Resource Include="www\css\ibutton\images\ibutton-slider-giva2.png" />
+    <Resource Include="www\css\blitzer\images\ui-bg_diagonals-thick_75_f3d8d8_40x40.png" />
+    <Resource Include="www\css\blitzer\images\ui-bg_dots-small_65_a6a6a6_2x2.png" />
+    <Resource Include="www\css\blitzer\images\ui-bg_flat_0_333333_40x100.png" />
+    <Resource Include="www\css\blitzer\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Resource Include="www\css\blitzer\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Resource Include="www\css\blitzer\images\ui-bg_glass_55_fbf8ee_1x400.png" />
+    <Resource Include="www\css\blitzer\images\ui-bg_highlight-hard_100_eeeeee_1x100.png" />
+    <Resource Include="www\css\blitzer\images\ui-bg_highlight-hard_100_f6f6f6_1x100.png" />
+    <Resource Include="www\css\blitzer\images\ui-bg_highlight-soft_15_cc0000_1x100.png" />
+    <Resource Include="www\css\blitzer\images\ui-icons_004276_256x240.png" />
+    <Resource Include="www\css\blitzer\images\ui-icons_cc0000_256x240.png" />
+    <Resource Include="www\css\blitzer\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="www\css\app\images\background_grey.png" />
+    <Content Include="www\css\app\images\background_logo.png" />
+    <Content Include="www\css\app\images\bg-feedback.png" />
+    <Content Include="www\css\app\images\chat\default_profil_picture.png" />
+    <Content Include="www\css\app\images\chat\header_background_chat.gif" />
+    <Content Include="www\css\app\images\chat\ico_close.png" />
+    <Content Include="www\css\app\images\chat\ico_corner.png" />
+    <Content Include="www\css\app\images\chat\ico_maximize.png" />
+    <Content Include="www\css\app\images\chat\ico_minimize.png" />
+    <Content Include="www\css\app\images\chat\ico_send.png" />
+    <Content Include="www\css\app\images\chat\ico_status.png" />
+    <Content Include="www\css\app\images\contacts\background_red.png" />
+    <Content Include="www\css\app\images\contacts\background_white.png" />
+    <Content Include="www\css\app\images\contacts\button_chat.png" />
+    <Content Include="www\css\app\images\contacts\button_orange.png" />
+    <Content Include="www\css\app\images\contacts\chatbox_background_grey.png" />
+    <Content Include="www\css\app\images\contacts\chatbox_background_red.png" />
+    <Content Include="www\css\app\images\contacts\chatbox_bottom_grey.png" />
+    <Content Include="www\css\app\images\contacts\chatbox_bottom_red.png" />
+    <Content Include="www\css\app\images\contacts\chatbox_glossy.png" />
+    <Content Include="www\css\app\images\contacts\chatbox_top_grey.png" />
+    <Content Include="www\css\app\images\contacts\chatbox_top_red.png" />
+    <Content Include="www\css\app\images\forms\background_button_connect.png" />
+    <Content Include="www\css\app\images\forms\background_button_subscribe.png" />
+    <Content Include="www\css\app\images\forms\button_calendar.png" />
+    <Content Include="www\css\app\images\forms\button_cancel.png" />
+    <Content Include="www\css\app\images\forms\button_cancel_glow.png" />
+    <Content Include="www\css\app\images\forms\button_save.png" />
+    <Content Include="www\css\app\images\forms\button_save_glow.png" />
+    <Content Include="www\css\app\images\forms\button_select.png" />
+    <Content Include="www\css\app\images\forms\button_select_glow.png" />
+    <Content Include="www\css\app\images\forms\check_need.png" />
+    <Content Include="www\css\app\images\forms\check_ok.png" />
+    <Content Include="www\css\app\images\forms\check_wrong.png" />
+    <Content Include="www\css\app\images\forms\ico_aol.png" />
+    <Content Include="www\css\app\images\forms\ico_facebook.png" />
+    <Content Include="www\css\app\images\forms\ico_feedback.png" />
+    <Content Include="www\css\app\images\forms\ico_google.png" />
+    <Content Include="www\css\app\images\forms\ico_msn.png" />
+    <Content Include="www\css\app\images\forms\ico_openid.png" />
+    <Content Include="www\css\app\images\forms\ico_twitter.png" />
+    <Content Include="www\css\app\images\forms\ico_yahoo.png" />
+    <Content Include="www\css\app\images\forms\select_black.png" />
+    <Content Include="www\css\app\images\forms\select_blond.png" />
+    <Content Include="www\css\app\images\forms\select_blue.png" />
+    <Content Include="www\css\app\images\forms\select_brown.png" />
+    <Content Include="www\css\app\images\forms\select_ginger.png" />
+    <Content Include="www\css\app\images\forms\select_green.png" />
+    <Content Include="www\css\app\images\forms\select_grey.png" />
+    <Content Include="www\css\app\images\forms\select_white.png" />
+    <Content Include="www\css\app\images\forms\select_whiteh.png" />
+    <Content Include="www\css\app\images\forms\select_yellow.png" />
+    <Content Include="www\css\app\images\menu\button_home.png" />
+    <Content Include="www\css\app\images\menu\button_home_blank.png" />
+    <Content Include="www\css\app\images\menu\button_home_reverse.png" />
+    <Content Include="www\css\app\images\menu\ico_contacts.png" />
+    <Content Include="www\css\app\images\menu\ico_contacts_glow.png" />
+    <Content Include="www\css\app\images\menu\ico_faq.png" />
+    <Content Include="www\css\app\images\menu\ico_faq_glow.png" />
+    <Content Include="www\css\app\images\menu\ico_filters.png" />
+    <Content Include="www\css\app\images\menu\ico_filters_glow.png" />
+    <Content Include="www\css\app\images\menu\ico_history.png" />
+    <Content Include="www\css\app\images\menu\ico_history_glow.png" />
+    <Content Include="www\css\app\images\menu\ico_label.png" />
+    <Content Include="www\css\app\images\menu\ico_profile.png" />
+    <Content Include="www\css\app\images\menu\ico_profile_glow.png" />
+    <Content Include="www\css\app\images\menu\ico_search.png" />
+    <Content Include="www\css\app\images\menu\ico_search_glow.png" />
+    <Content Include="www\css\app\images\menu\ico_settings.png" />
+    <Content Include="www\css\app\images\menu\ico_settings_glow.png" />
+    <Content Include="www\css\app\images\menu\ico_top_plus.png" />
+    <Content Include="www\css\app\images\menu\menu_background.png" />
+    <Content Include="www\css\app\images\menu\menu_background_reverse.png" />
+    <Content Include="www\css\app\images\menu\menu_horiz_background.png" />
+    <Content Include="www\css\app\images\menu\notif_arrow.png" />
+    <Content Include="www\css\app\images\menu\searchbar_logo.png" />
+    <Content Include="www\css\app\images\profile\man\avatar_blank.png" />
+    <Content Include="www\css\app\images\profile\man\live_alone.png" />
+    <Content Include="www\css\app\images\profile\man\live_alone_blank.png" />
+    <Content Include="www\css\app\images\profile\man\live_w_mates.png" />
+    <Content Include="www\css\app\images\profile\man\live_w_mates_blank.png" />
+    <Content Include="www\css\app\images\profile\man\live_w_parents.png" />
+    <Content Include="www\css\app\images\profile\man\live_w_parents_blank.png" />
+    <Content Include="www\css\app\images\profile\man\sign.png" />
+    <Content Include="www\css\app\images\profile\man\sign_blank.png" />
+    <Content Include="www\css\app\images\profile\man\silhouette.png" />
+    <Content Include="www\css\app\images\profile\man\silhouette_lookingfor.png" />
+    <Content Include="www\css\app\images\profile\man\silhouette_lookingfor_blank.png" />
+    <Content Include="www\css\app\images\profile\man\eyes\blue.png" />
+    <Content Include="www\css\app\images\profile\man\eyes\brown.png" />
+    <Content Include="www\css\app\images\profile\man\eyes\green.png" />
+    <Content Include="www\css\app\images\profile\man\hair_long\black.png" />
+    <Content Include="www\css\app\images\profile\man\hair_long\blond.png" />
+    <Content Include="www\css\app\images\profile\man\hair_long\blond_light.png" />
+    <Content Include="www\css\app\images\profile\man\hair_long\brown.png" />
+    <Content Include="www\css\app\images\profile\man\hair_long\ginger.png" />
+    <Content Include="www\css\app\images\profile\man\hair_long\grey.png" />
+    <Content Include="www\css\app\images\profile\man\hair_long\white.png" />
+    <Content Include="www\css\app\images\profile\man\hair_short\black.png" />
+    <Content Include="www\css\app\images\profile\man\hair_short\blond.png" />
+    <Content Include="www\css\app\images\profile\man\hair_short\blond_light.png" />
+    <Content Include="www\css\app\images\profile\man\hair_short\brown.png" />
+    <Content Include="www\css\app\images\profile\man\hair_short\ginger.png" />
+    <Content Include="www\css\app\images\profile\man\hair_short\grey.png" />
+    <Content Include="www\css\app\images\profile\man\hair_short\white.png" />
+    <Content Include="www\css\app\images\profile\man\skin\black.png" />
+    <Content Include="www\css\app\images\profile\man\skin\brown.png" />
+    <Content Include="www\css\app\images\profile\man\skin\white.png" />
+    <Content Include="www\css\app\images\profile\man\skin\yellow.png" />
+    <Content Include="www\css\app\images\profile\woman\avatar_blank.png" />
+    <Content Include="www\css\app\images\profile\woman\live_alone.png" />
+    <Content Include="www\css\app\images\profile\woman\live_w_mates.png" />
+    <Content Include="www\css\app\images\profile\woman\live_w_parents.png" />
+    <Content Include="www\css\app\images\profile\woman\sign.png" />
+    <Content Include="www\css\app\images\profile\woman\sign_blank.png" />
+    <Content Include="www\css\app\images\profile\woman\silhouette.png" />
+    <Content Include="www\css\app\images\profile\woman\silhouette_lookingfor.png" />
+    <Content Include="www\css\app\images\profile\woman\silhouette_lookingfor_blank.png" />
+    <Content Include="www\css\app\images\profile\screen\avatar_switch.png" />
+    <Content Include="www\css\app\images\profile\screen\bar_body_perso.png" />
+    <Content Include="www\css\app\images\profile\screen\bar_body_perso_edit.png" />
+    <Content Include="www\css\app\images\profile\screen\bar_edit_body_perso.png" />
+    <Content Include="www\css\app\images\profile\screen\bar_perso_body.png" />
+    <Content Include="www\css\app\images\profile\screen\bar_perso_body_edit.png" />
+    <Content Include="www\css\app\images\profile\screen\button_avatar_edit.png" />
+    <Content Include="www\css\app\images\profile\screen\button_avatar_edit_glow.png" />
+    <Content Include="www\css\app\images\profile\screen\driving_license_car.png" />
+    <Content Include="www\css\app\images\profile\screen\driving_license_car_blank.png" />
+    <Content Include="www\css\app\images\profile\screen\driving_license_motorcycle.png" />
+    <Content Include="www\css\app\images\profile\screen\driving_license_motorcycle_blank.png" />
+    <Content Include="www\css\app\images\profile\screen\gauge_minus.png" />
+    <Content Include="www\css\app\images\profile\screen\gauge_minus_hover.png" />
+    <Content Include="www\css\app\images\profile\screen\gauge_plus.png" />
+    <Content Include="www\css\app\images\profile\screen\gauge_plus_hover.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_alcohol.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_alcohol_blank.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_alcohol_none.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_alcohol_none_blank.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_party.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_party_blank.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_party_none.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_party_none_blank.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_piercing.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_piercing_blank.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_piercing_none.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_piercing_none_blank.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_tatoo.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_tatoo_blank.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_tatoo_none.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_tatoo_none_blank.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_tobacco.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_tobacco_blank.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_tobacco_none.png" />
+    <Content Include="www\css\app\images\profile\screen\rate_tobacco_none_blank.png" />
+    <Content Include="www\css\app\images\profile\screen\tab_landscape.png" />
+    <Content Include="www\css\app\images\profile\screen\tab_landscape_edit.png" />
+    <Content Include="www\css\app\images\profile\screen\tab_landscape_edit_glow.png" />
+    <Content Include="www\css\app\images\profile\woman\eyes\blue.png" />
+    <Content Include="www\css\app\images\profile\woman\eyes\brown.png" />
+    <Content Include="www\css\app\images\profile\woman\eyes\green.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_long\black.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_long\blond.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_long\blond_light.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_long\brown.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_long\ginger.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_long\grey.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_long\white.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_medium\black.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_medium\blond.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_medium\blond_light.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_medium\brown.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_medium\ginger.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_medium\grey.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_medium\white.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_short\black.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_short\blond.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_short\blond_light.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_short\brown.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_short\ginger.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_short\grey.png" />
+    <Content Include="www\css\app\images\profile\woman\hair_short\white.png" />
+    <Content Include="www\css\app\images\profile\woman\skin\black.png" />
+    <Content Include="www\css\app\images\profile\woman\skin\brown.png" />
+    <Content Include="www\css\app\images\profile\woman\skin\white.png" />
+    <Content Include="www\css\app\images\profile\woman\skin\yellow.png" />
+    <Content Include="www\css\app\images\screen_home\button_bottom_result_bar.png" />
+    <Content Include="www\css\app\images\screen_home\button_horiz_left_result_bar.png" />
+    <Content Include="www\css\app\images\screen_home\button_horiz_right_result_bar.png" />
+    <Content Include="www\css\app\images\screen_home\button_top_result_bar.png" />
+    <Content Include="www\css\app\images\screen_home\gauge_lvl1.png" />
+    <Content Include="www\css\app\images\screen_home\gauge_lvl2.png" />
+    <Content Include="www\css\app\images\screen_home\gauge_lvl3.png" />
+    <Content Include="www\css\app\images\screen_home\heart_15_39.png" />
+    <Content Include="www\css\app\images\screen_home\heart_40_59.png" />
+    <Content Include="www\css\app\images\screen_home\heart_60_79.png" />
+    <Content Include="www\css\app\images\screen_home\heart_80_100.png" />
+    <Content Include="www\css\app\images\screen_home\icon_15_39_m.png" />
+    <Content Include="www\css\app\images\screen_home\icon_15_39_w.png" />
+    <Content Include="www\css\app\images\screen_home\icon_40_59_m.png" />
+    <Content Include="www\css\app\images\screen_home\icon_40_59_w.png" />
+    <Content Include="www\css\app\images\screen_home\icon_60_79_m.png" />
+    <Content Include="www\css\app\images\screen_home\icon_60_79_w.png" />
+    <Content Include="www\css\app\images\screen_home\icon_80_100_m.png" />
+    <Content Include="www\css\app\images\screen_home\icon_80_100_w.png" />
+    <Content Include="www\css\app\images\screen_home\icon_shadow.png" />
+    <Content Include="www\css\app\images\screen_home\map_corners.png" />
+    <Content Include="www\css\app\images\screen_home\point_marker.png" />
+    <Content Include="www\css\app\images\screen_menu\button_contacts.png" />
+    <Content Include="www\css\app\images\screen_menu\button_filters.png" />
+    <Content Include="www\css\app\images\screen_menu\button_history.png" />
+    <Content Include="www\css\app\images\screen_menu\button_profile.png" />
+    <Content Include="www\css\app\images\screen_menu\button_search.png" />
+    <Content Include="www\css\app\images\screen_menu\button_settings.png" />
+    <Content Include="www\css\app\images\screen_menu\text_background.png" />
+    <Content Include="www\css\app\landscape.css" />
+    <Content Include="www\css\app\landscape\chat.css" />
+    <Content Include="www\css\app\landscape\contacts.css" />
+    <Content Include="www\css\app\landscape\edit.css" />
+    <Content Include="www\css\app\landscape\filters.css" />
+    <Content Include="www\css\app\landscape\home.css" />
+    <Content Include="www\css\app\landscape\profile.css" />
+    <Content Include="www\css\app\looking_for.css" />
+    <Content Include="www\css\app\portrait.css" />
+    <Content Include="www\css\app\portrait\chat.css" />
+    <Content Include="www\css\app\portrait\contacts.css" />
+    <Content Include="www\css\app\portrait\edit.css" />
+    <Content Include="www\css\app\portrait\filters.css" />
+    <Content Include="www\css\app\portrait\home.css" />
+    <Content Include="www\css\app\portrait\profile.css" />
+    <Content Include="www\css\app\portrait\subscribe.css" />
+    <Content Include="www\css\app\profile_portrait.css" />
+    <Content Include="www\css\app\rates.css" />
+    <Content Include="www\css\app\sign_switcher.css" />
+    <Content Include="www\css\blitzer\jquery-ui.css" />
+    <Content Include="www\css\ibutton\docs.css" />
+    <Content Include="www\css\ibutton\jquery.ibutton-giva-original.css" />
+    <Content Include="www\css\ibutton\jquery.ibutton.css" />
+    <Content Include="www\css\ibutton\jquery.ibutton.min.css" />
+    <Content Include="www\faq.html" />
+    <Content Include="www\filters.html" />
+    <Content Include="www\filters_edit.html" />
+    <Content Include="www\history.html" />
+    <Content Include="www\index.html" />
+    <Content Include="www\js\analytics.js" />
+    <Content Include="www\js\bindings.js" />
+    <Content Include="www\js\communication.class.js" />
+    <Content Include="www\js\cordova.js" />
+    <Content Include="www\js\doubleico_switcher.js" />
+    <Content Include="www\js\forms.js" />
+    <Content Include="www\js\i18next.js" />
+    <Content Include="www\js\jquery-ui.js" />
+    <Content Include="www\js\jquery-ui.touch-punch.js" />
+    <Content Include="www\js\jquery.js" />
+    <Content Include="www\js\jsOAuth.js" />
+    <Content Include="www\js\konami.js" />
+    <Content Include="www\js\lang.js" />
+    <Content Include="www\js\lib\jquery.easing.1.3.js" />
+    <Content Include="www\js\lib\jquery.ibutton.js" />
+    <Content Include="www\js\lib\jquery.ibutton.min.js" />
+    <Content Include="www\js\lib\jquery.metadata.js" />
+    <Content Include="www\js\map.class.js" />
+    <Content Include="www\js\menu.js" />
+    <Content Include="www\js\page.chat.js" />
+    <Content Include="www\js\page.contacts.js" />
+    <Content Include="www\js\page.filters.js" />
+    <Content Include="www\js\page.filters_edit.js" />
+    <Content Include="www\js\page.history.js" />
+    <Content Include="www\js\page.index.js" />
+    <Content Include="www\js\page.profile.js" />
+    <Content Include="www\js\page.profile_edit.js" />
+    <Content Include="www\js\page.settings.js" />
+    <Content Include="www\js\page.subscribe.js" />
+    <Content Include="www\js\portrait_maker.js" />
+    <Content Include="www\js\preload.js" />
+    <Content Include="www\js\rates.js" />
+    <Content Include="www\js\rounded_corner_square.class.js" />
+    <Content Include="www\js\sign_switcher.js" />
+    <Content Include="www\js\silhouette_sliders.js" />
+    <Content Include="www\js\text_colors.js" />
+    <Content Include="www\js\user.class.js" />
+    <Content Include="www\profile.html" />
+    <Content Include="www\profile_edit.html" />
+    <Content Include="www\settings.html" />
+    <Content Include="www\subscribe.html" />
+    <None Include="VERSION" />
+    <Resource Include="cordovalib\Images\appbar.back.rest.png" />
+    <Resource Include="cordovalib\Images\appbar.close.rest.png" />
+    <Resource Include="cordovalib\Images\appbar.feature.video.rest.png" />
+    <Resource Include="cordovalib\Images\appbar.next.rest.png" />
+    <Resource Include="cordovalib\Images\appbar.save.rest.png" />
+    <Resource Include="cordovalib\Images\appbar.stop.rest.png" />
+    <Content Include="cordovalib\resources\notification-beep.wav" />
+    <Content Include="CordovaSourceDictionary.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="BuildManifestProcessor.js" />
+    <None Include="cordova\debug.bat" />
+    <None Include="cordova\emulate.bat" />
+    <None Include="Properties\AppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Plugins\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <PropertyGroup>
+    <PreBuildEvent>CScript "$(ProjectDir)/BuildManifestProcessor.js" "$(ProjectPath)"</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

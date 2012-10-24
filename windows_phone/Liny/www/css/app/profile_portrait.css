@@ -1,0 +1,561 @@
+/* portrait profile style sheet */
+
+.portrait {
+	position: relative;
+	float: left;
+	width: 358.4px;
+	height: 358.4px;
+	border: 3px solid #000000;
+	overflow: hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+/* woman */
+
+.woman_skin {
+	position: absolute;
+	width: 99.48%;
+	height: 91.21%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-left: 0.62%;
+	margin-top: 9.04%;
+	z-index: 2;
+}
+
+.woman_eyes {
+	position: absolute;
+	width: 40.83%;
+	height: 6.2%;;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-left: 31%;
+	margin-top: 35.4%;
+	z-index: 3;
+}
+
+.woman_hair_long {
+	position: absolute;
+	width: 59.43%;
+	height: 96.64%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-left: 20.73%;
+	margin-top: 1.29%;
+	z-index: 4;
+	cursor: pointer;
+}
+
+.woman_hair_medium {
+	position: absolute;
+	width: 90.7%;
+	height: 70.28%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-left: 8.91%;
+	margin-top: 1.29%;
+	z-index: 4;
+	cursor: pointer;
+}
+
+.woman_hair_short {
+	position: absolute;
+	width: 57.88%;
+	height: 39.79%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-left: 22.28%;
+	margin-top: 1.29%;
+	z-index: 4;
+	cursor: pointer;
+}
+
+
+/* man */
+
+.man_skin {
+	position: absolute;
+	width: 99.48%;
+	height: 91.21%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-left: 0.62%;
+	margin-top: 9.04%;
+	z-index: 2;
+}
+
+.man_eyes {
+	position: absolute;
+	width: 31.52%;
+	height: 6.72%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-left: 35%;
+	margin-top: 35.7%;
+	z-index: 3;
+}
+
+.man_hair_short {
+	position: absolute;
+	width: 51.94%;
+	height: 42.64%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-left: 25.25%;
+	margin-top: 1.29%;
+	z-index: 4;
+	cursor: pointer;
+}
+
+.man_hair_medium {
+	position: absolute;
+	width: 57.88%;
+	height: 39.79%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-left: 22.28%;
+	margin-top: 1.29%;
+	z-index: 4;
+	cursor: pointer;
+}
+
+.man_hair_long {
+	position: absolute;
+	width: 77.77%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-left: 11%;
+	margin-top: 0%;
+	z-index: 4;
+	cursor: pointer;
+}
+
+#skin_empty {
+	position: absolute;
+	width: 44%;
+	height: 70%;
+	margin-left: 28.33%;
+	margin-top: 25%;
+	z-index: 5;
+	cursor: pointer;
+}
+
+#eyes_empty {
+	position: absolute;
+	width: 40.83%;
+	height: 6.72%;
+	margin-left: 31.33%;
+	margin-top: 35.4%;
+	z-index: 6;
+	cursor: pointer;
+}
+
+/* woman body parts for JS */
+
+.woman_skin_white {
+	background-image: url(images/profile/woman/skin/white.png);
+}
+
+.woman_skin_brown {
+	background-image: url(images/profile/woman/skin/brown.png);
+}
+
+.woman_skin_yellow {
+	background-image: url(images/profile/woman/skin/yellow.png);
+}
+
+.woman_skin_black {
+	background-image: url(images/profile/woman/skin/black.png);
+}
+
+.woman_eyes_blue {
+	background-image: url(images/profile/woman/eyes/blue.png);
+}
+
+.woman_eyes_brown {
+	background-image: url(images/profile/woman/eyes/brown.png);
+}
+
+.woman_eyes_green {
+	background-image: url(images/profile/woman/eyes/green.png);
+}
+
+.woman_hair_short_black {
+	background-image: url(images/profile/woman/hair_short/black.png);
+}
+
+.woman_hair_short_blond {
+	background-image: url(images/profile/woman/hair_short/blond.png);
+}
+
+.woman_hair_short_brown {
+	background-image: url(images/profile/woman/hair_short/brown.png);
+}
+
+.woman_hair_short_grey {
+	background-image: url(images/profile/woman/hair_short/grey.png);
+}
+
+.woman_hair_short_white {
+	background-image: url(images/profile/woman/hair_short/white.png);
+}
+
+.woman_hair_short_ginger {
+	background-image: url(images/profile/woman/hair_short/ginger.png);
+}
+
+.woman_hair_medium_black {
+	background-image: url(images/profile/woman/hair_medium/black.png);
+}
+
+.woman_hair_medium_blond {
+	background-image: url(images/profile/woman/hair_medium/blond.png);
+}
+
+.woman_hair_medium_brown {
+	background-image: url(images/profile/woman/hair_medium/brown.png);
+}
+
+.woman_hair_medium_grey {
+	background-image: url(images/profile/woman/hair_medium/grey.png);
+}
+
+.woman_hair_medium_white {
+	background-image: url(images/profile/woman/hair_medium/white.png);
+}
+
+.woman_hair_medium_ginger {
+	background-image: url(images/profile/woman/hair_medium/ginger.png);
+}
+
+.woman_hair_long_black {
+	background-image: url(images/profile/woman/hair_long/black.png);
+}
+
+.woman_hair_long_blond {
+	background-image: url(images/profile/woman/hair_long/blond.png);
+}
+
+.woman_hair_long_brown {
+	background-image: url(images/profile/woman/hair_long/brown.png);
+}
+
+.woman_hair_long_grey {
+	background-image: url(images/profile/woman/hair_long/grey.png);
+}
+
+.woman_hair_long_white {
+	background-image: url(images/profile/woman/hair_long/white.png);
+}
+
+.woman_hair_long_ginger {
+	background-image: url(images/profile/woman/hair_long/ginger.png);
+}
+
+
+/* man body parts for JS */
+
+.man_skin_white {
+	background-image: url(images/profile/man/skin/white.png);
+}
+
+.man_skin_brown {
+	background-image: url(images/profile/man/skin/brown.png);
+}
+
+.man_skin_yellow {
+	background-image: url(images/profile/man/skin/yellow.png);
+}
+
+.man_skin_black {
+	background-image: url(images/profile/man/skin/black.png);
+}
+
+.man_eyes_blue {
+	background-image: url(images/profile/man/eyes/blue.png);
+}
+
+.man_eyes_brown {
+	background-image: url(images/profile/man/eyes/brown.png);
+}
+
+.man_eyes_green {
+	background-image: url(images/profile/man/eyes/green.png);
+}
+
+.man_hair_short_black {
+	background-image: url(images/profile/man/hair_short/black.png);
+}
+
+.man_hair_short_blond {
+	background-image: url(images/profile/man/hair_short/blond.png);
+}
+
+.man_hair_short_brown {
+	background-image: url(images/profile/man/hair_short/brown.png);
+}
+
+.man_hair_short_grey {
+	background-image: url(images/profile/man/hair_short/grey.png);
+}
+
+.man_hair_short_white {
+	background-image: url(images/profile/man/hair_short/white.png);
+}
+
+.man_hair_short_ginger {
+	background-image: url(images/profile/man/hair_short/ginger.png);
+}
+
+.man_hair_medium_black {
+	background-image: url(images/profile/woman/hair_short/black.png);
+}
+
+.man_hair_medium_blond {
+	background-image: url(images/profile/woman/hair_short/blond.png);
+}
+
+.man_hair_medium_brown {
+	background-image: url(images/profile/woman/hair_short/brown.png);
+}
+
+.man_hair_medium_grey {
+	background-image: url(images/profile/woman/hair_short/grey.png);
+}
+
+.man_hair_medium_white {
+	background-image: url(images/profile/woman/hair_short/white.png);
+}
+
+.man_hair_medium_ginger {
+	background-image: url(images/profile/woman/hair_short/ginger.png);
+}
+
+.man_hair_long_black {
+	background-image: url(images/profile/man/hair_long/black.png);
+}
+
+.man_hair_long_blond {
+	background-image: url(images/profile/man/hair_long/blond.png);
+}
+
+.man_hair_long_brown {
+	background-image: url(images/profile/man/hair_long/brown.png);
+}
+
+.man_hair_long_grey {
+	background-image: url(images/profile/man/hair_long/grey.png);
+}
+
+.man_hair_long_white {
+	background-image: url(images/profile/man/hair_long/white.png);
+}
+
+.man_hair_long_ginger {
+	background-image: url(images/profile/man/hair_long/ginger.png);
+}
+
+
+.woman_hair_translate_right_disappear {
+	-webkit-transform: translateX(150%);
+	-moz-transform: translateX(150%);
+	-o-transform: translateX(150%);
+	-ms-transform: translateX(150%);
+	transform: translateX(150%);
+	
+	-webkit-transition: -webkit-transform 1s linear;
+	-moz-transition: -moz-transform 1s linear;
+	-o-transition: -o-transform 1s linear;
+	-ms-transition: -ms-transform 1s linear;
+	transition: transform 1s linear;
+}
+
+.woman_hair_translate_left_disappear {
+	-webkit-transform: translateX(-150%);
+	-moz-transform: translateX(-150%);
+	-o-transform: translateX(-150%);
+	-ms-transform: translateX(-150%);
+	transform: translateX(-150%);
+	
+	-webkit-transition: -webkit-transform 1s linear;
+	-moz-transition: -moz-transform 1s linear;
+	-o-transition: -o-transform 1s linear;
+	-ms-transition: -ms-transform 1s linear;
+	transition: transform 1s linear;
+}
+
+.woman_hair_translate_right_appear_long, .woman_hair_translate_right_appear_medium, .woman_hair_translate_right_appear_short  {
+	-webkit-transition: -webkit-transform 1s linear;
+	-moz-transition: -moz-transform 1s linear;
+	-o-transition: -o-transform 1s linear;
+	-ms-transition: -ms-transform 1s linear;
+	transition: transform 1s linear;
+} 
+
+.woman_hair_translate_right_appear_long {
+	margin-left: -150%;
+	-webkit-transform: translateX(288%);
+	-moz-transform: translateX(288%);
+	-o-transform: translateX(288%);
+	-ms-transform: translateX(288%);
+	transform: translateX(288%);
+}
+
+.woman_hair_translate_right_appear_medium {
+	margin-left: -200%;
+	-webkit-transform: translateX(228%);
+	-moz-transform: translateX(228%);
+	-o-transform: translateX(228%);
+	-ms-transform: translateX(228%);
+	transform: translateX(228%);
+}
+
+.woman_hair_translate_right_appear_short {
+	margin-left: -150%;
+	-webkit-transform: translateX(298%);
+	-moz-transform: translateX(298%);
+	-o-transform: translateX(298%);
+	-ms-transform: translateX(298%);
+	transform: translateX(298%);
+}
+
+.woman_hair_translate_left_appear_long, .woman_hair_translate_left_appear_medium, .woman_hair_translate_left_appear_short  {
+	-webkit-transition: -webkit-transform 1s linear;
+	-moz-transition: -moz-transform 1s linear;
+	-o-transition: -o-transform 1s linear;
+	-ms-transition: -ms-transform 1s linear;
+	transition: transform 1s linear;
+} 
+
+.woman_hair_translate_left_appear_long {
+	margin-left: 200%;
+	-webkit-transform: translateX(-298%);
+	-moz-transform: translateX(-298%);
+	-o-transform: translateX(-298%);
+	-ms-transform: translateX(-298%);
+	transform: translateX(-298%);
+}
+
+.woman_hair_translate_left_appear_medium {
+	margin-left: 250%;
+	-webkit-transform: translateX(-258%);
+	-moz-transform: translateX(-258%);
+	-o-transform: translateX(-258%);
+	-ms-transform: translateX(-258%);
+	transform: translateX(-258%);
+}
+
+.woman_hair_translate_left_appear_short {
+	margin-left: 200%;
+	-webkit-transform: translateX(-298%);
+	-moz-transform: translateX(-298%);
+	-o-transform: translateX(-298%);
+	-ms-transform: translateX(-298%);
+	transform: translateX(-298%);
+}
+
+
+.man_hair_translate_right_disappear {
+	-webkit-transform: translateX(150%);
+	-moz-transform: translateX(150%);
+	-o-transform: translateX(150%);
+	-ms-transform: translateX(150%);
+	transform: translateX(150%);
+	
+	-webkit-transition: -webkit-transform 1s linear;
+	-moz-transition: -moz-transform 1s linear;
+	-o-transition: -o-transform 1s linear;
+	-ms-transition: -ms-transform 1s linear;
+	transition: transform 1s linear;
+}
+
+.man_hair_translate_left_disappear {
+	-webkit-transform: translateX(-150%);
+	-moz-transform: translateX(-150%);
+	-o-transform: translateX(-150%);
+	-ms-transform: translateX(-150%);
+	transform: translateX(-150%);
+	
+	-webkit-transition: -webkit-transform 1s linear;
+	-moz-transition: -moz-transform 1s linear;
+	-o-transition: -o-transform 1s linear;
+	-ms-transition: -ms-transform 1s linear;
+	transition: transform 1s linear;
+}
+
+.man_hair_translate_right_appear_long, .man_hair_translate_right_appear_medium, .man_hair_translate_right_appear_short  {
+	-webkit-transition: -webkit-transform 1s linear;
+	-moz-transition: -moz-transform 1s linear;
+	-o-transition: -o-transform 1s linear;
+	-ms-transition: -ms-transform 1s linear;
+	transition: transform 1s linear;
+} 
+
+.man_hair_translate_right_appear_long {
+	margin-left: -150%;
+	-webkit-transform: translateX(288%);
+	-moz-transform: translateX(288%);
+	-o-transform: translateX(288%);
+	-ms-transform: translateX(288%);
+	transform: translateX(288%);
+}
+
+.man_hair_translate_right_appear_medium {
+	margin-left: -200%;
+	-webkit-transform: translateX(228%);
+	-moz-transform: translateX(228%);
+	-o-transform: translateX(228%);
+	-ms-transform: translateX(228%);
+	transform: translateX(228%);
+}
+
+.man_hair_translate_right_appear_short {
+	margin-left: -150%;
+	-webkit-transform: translateX(298%);
+	-moz-transform: translateX(298%);
+	-o-transform: translateX(298%);
+	-ms-transform: translateX(298%);
+	transform: translateX(298%);
+}
+
+.man_hair_translate_left_appear_long, .man_hair_translate_left_appear_medium, .man_hair_translate_left_appear_short  {
+	-webkit-transition: -webkit-transform 1s linear;
+	-moz-transition: -moz-transform 1s linear;
+	-o-transition: -o-transform 1s linear;
+	-ms-transition: -ms-transform 1s linear;
+	transition: transform 1s linear;
+} 
+
+.man_hair_translate_left_appear_long {
+	margin-left: 200%;
+	-webkit-transform: translateX(-298%);
+	-moz-transform: translateX(-298%);
+	-o-transform: translateX(-298%);
+	-ms-transform: translateX(-298%);
+	transform: translateX(-298%);
+}
+
+.man_hair_translate_left_appear_medium {
+	margin-left: 200%;
+	-webkit-transform: translateX(-298%);
+	-moz-transform: translateX(-298%);
+	-o-transform: translateX(-298%);
+	-ms-transform: translateX(-298%);
+	transform: translateX(-298%);
+}
+
+.man_hair_translate_left_appear_short {
+	margin-left: 200%;
+	-webkit-transform: translateX(-298%);
+	-moz-transform: translateX(-298%);
+	-o-transform: translateX(-298%);
+	-ms-transform: translateX(-298%);
+	transform: translateX(-298%);
+}

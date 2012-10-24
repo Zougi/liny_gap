@@ -1,0 +1,15 @@
+{
+    "title": "Paramètres",
+    "location": {
+        "share": "Partager ma position",
+        "save": "Sauvegarder un nombre raisonnable de position pour trouver des résultats plus justes"
+    },
+    "notifications": {
+        "match": "Recevoir les notifications de love match",
+        "all": "Recevoir toutes les notifications"
+    },
+    "search_perimeter": "Definir le périmètre de recherche",
+    "display_friends": "Afficher les amis sur la map",
+    "disable_landscape": "Désactiver la vue paysage",
+    "min_match": "Pourcentage de match minimum"
+}

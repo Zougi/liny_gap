@@ -1,0 +1,184 @@
+/* portrait contacts style sheet */
+
+.content {
+	min-width: 0;
+}
+
+#contacts_list {
+	width: 100%;
+}
+
+#profile {
+	display: none;
+}
+
+#notifications {
+	width: 100%;
+	max-height: 40%;
+	margin-top: -8px;
+}
+
+.notif, .contact {
+	position: relative;
+	width: 100%;
+	height: 120px;
+	background: url(../images/contacts/background_white.png) repeat-x;
+}
+
+.contact {
+	cursor: pointer;
+}
+
+.notif_altern, .contact_altern {
+	background: url(../images/contacts/background_red.png) repeat-x;
+}
+
+.notif_avatar {
+	position: absolute;
+	top: 14px;
+	left: 3%;
+	width: 92px;
+	height: 92px;
+	border: 2px solid #000;
+}
+
+.button_infos {
+	position: absolute;
+	left: 60%;
+	top: 80px;
+	font-size: 13pt;
+	display: block;
+	width: 70px;
+	height: 30px;
+	background: url(../images/forms/background_button_connect.png) repeat-x;
+	background-size: contain;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	border: 2px solid #666666;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.button_deny {
+	position: absolute;
+	left: 80%;
+	top: 80px;
+	font-size: 13pt;
+	display: block;
+	width: 70px;
+	height: 30px;
+	background: url(../images/contacts/button_orange.png) repeat-x;
+	background-size: contain;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	border: 2px solid #666666;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.firstname {
+	position: absolute;
+	top: 54px;
+	left: 32%;
+}
+
+.lastname {
+	position: absolute;
+	top: 69px;
+	left: 32%;
+}
+
+#contacts_search {
+	position: relative;
+	margin-left: 12.5%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#text_search {
+	width: 50%;	
+}
+
+#button_contacts_search {
+	display: inline-block;
+	background-image: url(../images/forms/background_button_subscribe.png);
+	background-repeat: repeat-x;
+	background-size: contain;
+	cursor: pointer;
+	height: 37px;
+	width: 120px;
+	text-align: center;
+	color: #FFFFFF;
+	text-decoration: none;
+	border-radius: 5px;
+	line-height: 28px;
+	font-size: 12pt;
+	margin-left: 6.25%;
+}
+
+.notif_chat {
+	position: absolute;
+	top: 14px;
+	left: 55%;
+	width: 42%;
+	height: 52px;
+	border: 2px solid #000;
+	border-radius: 5px;
+}
+
+.heart_15_39, .heart_40_59, .heart_60_79, .heart_80_100 {
+	width: 33.3px;
+	height: 29.4px;
+	text-align: center;
+	font-size: large;
+	color: #FFFFFF;
+	line-height: 18px;
+	font-size: 9pt;
+	position: absolute;
+	background-size: contain;
+	background-repeat: no-repeat;
+	top: 22px;
+	left: 40%;
+	z-index: 2;
+}
+
+.heart_15_39 {
+	background-image: url(../images/screen_home/heart_15_39.png);
+}
+
+.heart_40_59 {
+	background-image: url(../images/screen_home/heart_40_59.png);
+}
+
+.heart_60_79 {
+	background-image: url(../images/screen_home/heart_60_79.png);
+}
+
+.heart_80_100 {
+	background-image: url(../images/screen_home/heart_80_100.png);
+}
+
+.gauge_lvl1, .gauge_lvl2, .gauge_lvl3 {
+	position: absolute;
+	z-index: 2;
+	top: 22px;
+	left: 33.33%;
+	width: 18.6px;
+	height: 28.8px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.gauge_lvl1 {
+	background-image: url(../images/screen_home/gauge_lvl1.png);
+}
+
+.gauge_lvl2 {
+	background-image: url(../images/screen_home/gauge_lvl2.png);
+}
+
+.gauge_lvl3 {
+	background-image: url(../images/screen_home/gauge_lvl3.png);
+}

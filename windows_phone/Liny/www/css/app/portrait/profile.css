@@ -1,0 +1,553 @@
+/* portrait profile style sheet */
+
+@import url(../sign_switcher.css);
+@import url(../rates.css);
+
+.lookingfor_man, .lookingfor_man_blank {
+	background-size: 53px 129px;
+	width: 53px;
+	height: 129px;
+}
+
+.lookingfor_woman, .lookingfor_woman_blank {
+	background-size: 46px 128px;
+	width: 46px;
+	height: 128px;
+}
+
+#global_portrait_wrapper {
+	position: relative;
+	margin-left: 0;
+	float: none;
+	width: 450px;
+}
+
+#navbar_landscape {
+	display: none;	
+}
+
+#relationship {
+	margin-top: 30px;	
+}
+
+#global_portrait {
+	display: none;	
+}
+
+.infos_identity {
+	margin-left: 4px;
+	position: relative;
+	float: left;
+	width: 30%;
+}
+
+.infos_log {
+	position: relative;
+	float: left;
+	width: 30%;
+}
+
+#navbar {
+	display: inline;
+	width: 417px;
+	height: 42px;
+	line-height: 42px;
+	top: 410px;
+	white-space: nowrap;
+	left: 0;
+	padding-top: 11px;
+	padding-bottom: 11px;
+}
+
+.chidren_navbar {
+	position: relative;
+	height: 10.49%;
+	width: 42%;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-size: contain;
+	vertical-align: middle;
+	display: inline-block;
+	white-space: normal;
+	margin-top: -42px;
+	cursor: pointer;
+	color: #FFF;
+	font-weight: bold;
+	padding: 0;
+}
+
+.chidren_navbar:first-child {
+	margin-right: 0;	
+}
+
+.chidren_navbar a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+#bt_personality, #bt_physique {
+	margin-top: -5px;
+	height: 40px;
+	width: 140px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#bt_personality	 {
+	margin-left: 12px;
+}
+
+#bt_edit {
+	margin-top: -5px;
+	height: 40px;
+	width: 50px;
+}
+
+.personality {
+	background: url(../images/profile/screen/bar_perso_body_edit.png);
+}
+
+
+.physique {
+	background: url(../images/profile/screen/bar_body_perso_edit.png);
+}
+
+.edit {
+	background: url(../images/profile/screen/bar_edit_body_perso.png);
+}
+
+.edit_personality {
+	background: url(../images/profile/screen/bar_perso_body.png);
+}
+
+
+.edit_physique {
+	background: url(../images/profile/screen/bar_body_perso.png);
+}
+
+
+#genderBox {
+	margin-left: 7%;
+	text-align: center;
+}
+
+#woman {
+	position: relative;
+	float: left;
+	width: 45px;
+	height: 90px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	cursor: pointer;
+}
+
+#man {
+	position: relative;
+	float: left;
+	width: 64px;
+	height: 90px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	cursor: pointer;
+}
+/*
+.portrait {
+	margin-left: 30px;
+}*/
+
+.container > .content >:first-child {
+	min-width: 780px;	
+}
+
+#infos {
+	display: inline;
+	position: relative;;
+	margin-left: 30px;
+	float: none;
+	width: auto;
+}
+
+#infos_landscape {
+	display: none;
+}
+
+#tab_personality, #tab_physique {
+	left: 45px;
+	padding-bottom: 50px;
+	width: 100%;
+}
+
+#tab_physique {
+	display: none;
+}
+
+#color_hair {
+	position: relative;
+	z-index: 2;
+}
+
+#color_eyes {
+	margin-top: 30px;
+}
+
+#color_skin {
+	position: relative;
+	z-index: 1;
+}
+
+.color_black:before, .color_blond:before, .color_blue:before, .color_brown:before, .color_ginger:before, .color_green:before, .color_grey:before, .color_white:before, .color_whiteh:before, .color_yellow:before {
+	margin-right: 10px;	
+}
+
+.color_black:before {
+	content: url(../images/forms/select_black.png);
+}
+
+.color_blond:before {
+	content: url(../images/forms/select_blond.png);
+}
+
+.color_blue:before {
+	content: url(../images/forms/select_blue.png);
+}
+
+.color_brown:before {
+	content: url(../images/forms/select_brown.png);
+}
+
+.color_ginger:before {
+	content: url(../images/forms/select_ginger.png);
+}
+
+.color_green:before {
+	content: url(../images/forms/select_green.png);
+}
+
+.color_grey:before {
+	content: url(../images/forms/select_grey.png);
+}
+
+.color_white:before {
+	content: url(../images/forms/select_white.png);
+}
+
+.color_whiteh:before {
+	content: url(../images/forms/select_whiteh.png);
+}
+
+.color_yellow:before {
+	content: url(../images/forms/select_yellow.png);
+}
+
+.avatar {
+	position: relative;
+	float: left;
+	height: 170px;
+	width: 170px;
+	border: 4px solid #000000;
+}
+
+.avatar img {
+	max-height: 170px;
+	height: 100%;
+	width: 100%;
+}
+
+.avatar a {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: url(../images/profile/screen/button_avatar_edit.png);
+	width: 60px;
+	height: 26px;
+	border: 0;
+	color: #fff;
+	font-weight: bold;
+	text-align: left;
+	cursor: pointer;
+	text-align:center;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.avatar a:hover {
+	background: url(../images/profile/screen/button_avatar_edit_glow.png);
+}
+
+.avatar a p {
+	margin-top: 3px;
+	margin-left: -12px;
+}
+
+.box_birthdate {
+	width: 65%;
+	margin-top: 70px;
+	background-image: url(../images/forms/button_calendar.png);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.box_identity {
+	margin-top: 25px !important;
+	width: 65% !important;
+}
+
+.box_log {
+	margin-top: 40px !important;
+	width: 65% !important;
+}
+
+#silhouette {
+	position: relative;
+	float: right;
+	height: 313px;
+	width: 60px;
+	margin-left: 300px;
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+
+#silhouette_img {
+	position: absolute;
+	float: left;
+	height: 313px;
+	width: 60px;
+	background-repeat: no-repeat;
+	background-size: 60px 313px;
+}
+
+.silhouette_woman {
+	background-image: url(../images/profile/woman/silhouette.png)
+}
+
+.silhouette_man {
+	background-image: url(../images/profile/man/silhouette.png)
+}
+
+#slider_height {
+	position: absolute;
+	top: 10px;
+	height: 273px;
+	left: 90px;
+	width: 3px;
+}
+
+#slider_weight {
+	position: absolute;
+	width: 106px;
+	top: 324px;
+	left: -36px;
+	height: 3px;
+}
+
+#height_wrapper {
+	position: absolute;
+	float: left;
+	margin-top: 40px;
+}
+
+#weight_wrapper {
+	position: absolute;
+	float: left;
+	margin-top: 100px;
+}
+
+.ui-slider {
+	background-color: #000;
+	background-image: none;
+}
+
+.ui-slider a {
+	margin-top:-5px;
+}
+
+#slider_height a, #slider_weight a {
+	color: black;
+	font-weight: normal;
+	text-decoration: none;
+	font-size: 9pt;
+	width: 25px;
+	background-image: url(../images/background_grey.png);
+	border: none;
+	line-height: 20px;
+	padding-bottom: 7px;
+	margin-left: -7px;
+}
+
+#rate_party {
+	height: 100px;
+	white-space: nowrap;
+	width: 160px;
+}
+
+#rate_party_text {
+	text-align: center;
+}
+
+#rate_alcohol {
+	margin-top: 40px;
+	height: 100px;
+	white-space: nowrap;
+	width: 140px;
+}
+
+#rate_alcohol_text {
+	text-align: center;
+}
+
+#rate_tobacco {
+	margin-top: 50px;
+	height: 100px;
+	white-space: nowrap;
+	width: 120px;
+}
+
+#rate_tobacco_text {
+	text-align: center;
+}
+
+#rate_tatoo {
+	width: 190px;
+	padding-bottom: 90px;
+}
+
+#rate_tatoo_text {
+	text-align: center;
+}
+
+#rate_piercing {
+	width: 140px;
+}
+
+#rate_piercing_text {
+	text-align: center;
+}
+
+#haircut {
+	width: 116px;
+}
+
+#rate_haircut {
+	width: 116px;
+	height: 42px;
+	border-bottom: 5px solid #000;
+}
+
+#haircut p {
+	text-align: center;
+}
+
+.haircut_1 {
+	position: relative;
+	background-color: #000;
+	vertical-align: bottom;
+	display: inline-block;
+	white-space: normal;
+	width: 8px;
+	height: 12px;
+}
+
+.haircut_1_blank {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.3);
+	vertical-align: bottom;
+	display: inline-block;
+	white-space: normal;
+	width: 8px;
+	height: 12px;
+}
+
+.haircut_2 {
+	position: relative;
+	background-color: #000;
+	vertical-align: bottom;
+	display: inline-block;
+	white-space: normal;
+	width: 8px;
+	height: 22px;
+	margin-left: 22px;
+}
+
+.haircut_2_blank {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.3);
+	vertical-align: bottom;
+	display: inline-block;
+	white-space: normal;
+	width: 8px;
+	height: 22px;
+	margin-left: 22px;
+}
+
+.haircut_3 {
+	position: relative;
+	background-color: #000;
+	vertical-align: bottom;
+	display: inline-block;
+	white-space: normal;
+	width: 8px;
+	height: 32px;
+	margin-left: 22px;
+}
+
+.haircut_3_blank {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.3);
+	vertical-align: bottom;
+	display: inline-block;
+	white-space: normal;
+	width: 8px;
+	height: 32px;
+	margin-left: 22px;
+}
+
+.haircut_4 {
+	position: relative;
+	background-color: #000;
+	vertical-align: bottom;
+	display: inline-block;
+	white-space: normal;
+	width: 8px;
+	height: 42px;
+	margin-left: 22px;
+}
+
+.haircut_4_blank {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.3);
+	vertical-align: bottom;
+	display: inline-block;
+	white-space: normal;
+	width: 8px;
+	height: 42px;
+	margin-left: 22px;
+}
+
+#preload_bt_avatar_edit {
+	background: url(../images/profile/screen/button_avatar_edit_glow.png);	
+}
+
+#avatarfile {
+	display: none; /* bug pas jespere */
+}
+
+#driving_license {
+	margin-top: 50px;
+}
+
+#live_with {
+	margin-top: 30px;
+	padding-bottom: 90px;
+}
+
+#edit_landscape {
+	display: none;
+}

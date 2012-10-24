@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Liny</title>
+<!-- general css -->
+<link href="css/blitzer/jquery-ui.css" type="text/css" rel="stylesheet" />
+<link href="css/app/landscape.css" rel="stylesheet" type="text/css" />
+<link href="css/app/portrait.css" rel="stylesheet" type="text/css" media="only screen and (max-width:720px)" />
+<!-- page css -->
+<link href="css/app/profile_portrait.css" rel="stylesheet" type="text/css" />
+<link href="css/app/landscape/home.css" rel="stylesheet" type="text/css" />
+<link href="css/app/portrait/home.css" rel="stylesheet" type="text/css" media="only screen and (max-width:720px)" />
+<script charset="utf-8" src="js/cordova.js"></script>
+</head>
+<body>
+<div id="fb-root"></div>
+<div class="container">
+	<div id='fb-banner'>Nous avons besoin de vous, <a style="color: #98d3f4; margin-right: 10px;" href="mailto:feedback@liny.info">donnez-nous vos impressions!</a></div>
+	<div id="menu_landscape" class="menu_landscape">
+      <div class="ico_search menu_landscape_child">
+        <a href="index.html" title="Search"><span class="spanlinks"></span></a>
+        <a href="index.html" class="menuLinks" data-i18n="ns.menu:search">Search</a>
+      <!-- end ico_search --></div>
+      
+      <div class="ico_contacts menu_landscape_child">
+        <a href="contacts.html" title="Contacts"><span class="spanlinks"></span></a>
+        <a href="contacts.html" class="menuLinks" data-i18n="ns.menu:contacts">Contacts</a>
+      <!-- end ico_contacts --></div>
+      
+      <div class="ico_filters menu_landscape_child">
+        <a href="filters.html" title="Filters"><span class="spanlinks"></span></a>
+        <a href="filters.html" class="menuLinks" data-i18n="ns.menu:filters">Filters</a>
+      <!-- end ico_filters --></div>
+      
+      
+      <div class="ico_profile menu_landscape_child">
+        <a href="profile.html" title="Profile"><span class="spanlinks"></span></a>
+        <a href="profile.html" class="menuLinks" data-i18n="ns.menu:profile">Profile</a>
+      <!-- end ico_profile --></div>
+      
+      <div class="ico_history menu_landscape_child">
+        <a href="history.html" title="History"><span class="spanlinks"></span></a>
+        <a href="history.html" class="menuLinks" data-i18n="ns.menu:history">History</a>
+      <!-- end ico_history --></div>
+     
+      <div class="ico_settings menu_landscape_child">
+        <a href="settings.html" title="Settings"><span class="spanlinks"></span></a>
+        <a href="settings.html" class="menuLinks" data-i18n="ns.menu:settings">Settings</a>
+      <!-- end ico_settings --></div>
+
+      <div class="ico_faq 	 menu_landscape_child">
+        <a href="faq.html" title="faq"><span class="spanlinks"></span></a>
+        <a href="faq.html" class="menuLinks" data-i18n="ns.menu:faq">FAQ</a>
+      <!-- end ico_faq --></div>
+  <!-- end menu_landscape --></div>
+	
+  <div id="menu_top">
+  	<p>Liny</p><!--<img id="logo" src="css/app/images/logo.png" />-->
+    <form id="connectform_top" method="post">
+        <input id="top_email" name="email" title="Email" placeholder="Email" type="text" data-i18n="[placeholder]ns.menu:login.email" />
+        <input id="top_password" name="password" title="Password" placeholder="Password" type="password" data-i18n="[placeholder]ns.menu:login.password" />
+        <button id="top_connect" class="connect reverse" type="submit"><p data-i18n="ns.menu:login.submit">Connect</p></button>
+    </form>
+		<div id="div_ads"></div>
+		<button id="top_subscribe" class="subscribe reverse" type="submit"><p data-i18n="ns.menu:subscribe">Subscribe</p></button>
+		<a id="top_logout" href="?logout=true">logout</a>
+    <div id="lang">
+    	<ul>
+        	<li>en</li>
+            <li data-lang="en">en</li>
+            <li data-lang="fr">fr</li>
+        </ul>
+    <!-- end lang --></div>
+    <div id="chat_open" data-i18n="ns.menu:contacts_online">
+			Contacts Online
+    </div>
+    <div id="chat_bar">
+    	<div id="chat_bar_contacts"></div>
+        <div id="chat_bar_msgs"></div>
+    	<input type="text" />
+    </div>
+  <!-- end menu_top --></div>
+  <!--<form>
+  		<input id="search" type="text" title="Search" name="search" data-i18n="[title]searchbar.title" />
+    </form>
+  <div id="searchbar_button"><input type="checkbox" name="rememberme" value="true" /><i data-i18n="searchbar.rememberme">remember me</i></div>-->
+  
+  <div class="content">
+  		<div id="mapContent">
+            <div id="resultBar">
+                <div id="results"></div>
+                <div id="button_resultBar_top" class="button_resultBar"></div>
+                <div id="button_resultBar_bottom" class="button_resultBar"></div>
+            <!-- end resultBar --></div>
+            <div id="mapContainer">
+                <div id="mapCanvas"></div>
+                <div class="mapTopLeft"></div>
+                <div class="mapTopRight"></div>
+								<div id="mapNoGPS">
+									<p data-i18n="msg_noGPS">GPS disabled.</p>
+									<div id="blockload_1" class="barload"></div>
+								  <div id="blockload_2" class="barload"></div>
+								  <div id="blockload_3" class="barload"></div>
+								  <div id="blockload_4" class="barload"></div>
+								<!-- end mapNoGPS --></div>
+                <div id="loadmap">
+                    <div id="blockload_1" class="barload"></div>
+                    <div id="blockload_2" class="barload"></div>
+                    <div id="blockload_3" class="barload"></div>
+                    <div id="blockload_4" class="barload"></div>
+                    <p data-i18n="msg_share_location">To display the map, allow your browser to share your location</p>
+                </div>
+                <div class="mapBottomLeft"></div>
+                <div class="mapBottomRight"></div>
+            <!-- end mapContainer --></div>
+        <!-- end mapContent --></div>
+        
+        <form id="subscribe_landscape" method="post">
+            <strong data-i18n="subscribe.title">Subscribe</strong>:<br />
+            <input id="email" name="email" title=" Email" placeholder="Email" type="email" data-i18n="[placeholder]subscribe.email" />
+						<div class="check"></div>
+            <input id="subpassword" name="password" title="Password" placeholder="Password" type="password" data-i18n="[placeholder]subscribe.password" />
+						<div class="check"></div>
+            <input id="firstname" name="firstname" title="Firstname" placeholder="Firstname" type="text" data-i18n="[placeholder]subscribe.firstname" />
+						<div class="check"></div>
+            <input id="lastname" name="lastname" title="Lastname" placeholder="Lastname" type="text" data-i18n="[placeholder]subscribe.lastname" />
+						<div class="check"></div>
+						<div style="clear:both;"></div>
+            <div id="genderBox">
+            <strong data-i18n="subscribe.gender.title">Gender</strong>:
+                <table>
+                    <tr>
+                        <td><div id="woman" class="sign_woman" style="margin-left:22px;"></div></td>
+                        
+                        <td><div id="man" class="sign_man_blank"></div></td>
+                    </tr>
+                    <tr>
+                        <td><p id="woman_text" style="cursor:pointer;" data-i18n="subscribe.gender.woman">woman</p></td>
+                        <td><p id="man_text" style="cursor:pointer;" data-i18n="subscribe.gender.man">man</p></td>
+                    </tr>
+                </table>
+                <input id="gender" type="hidden" name="gender" value="woman" />
+            <!-- end genderBox --></div>
+            <input id="birthdate" name="birthdate" title="Birthdate" placeholder="Birthdate" type="text" data-i18n="[placeholder]subscribe.birthdate" class="box_birthdate" />
+						<div class="check"></div>
+            <button id="subscribe_l" class="subscribe reverse" type="submit"><p data-i18n="subscribe.submit">Subscribe</p></button>
+            <div id="social_l" class="bt_social">
+            	<button class="bt_facebook"></button>
+				<button class="bt_twitter"></button>
+            	<button class="bt_feedback" action="mailto:feedback@liny.info"></button>
+            </div>
+            <div style="clear: both;">
+	            <span style="color: red; font-size: 12px;">Nous avons besoin de vous...</span>
+            </div>
+        <!-- end subscribe_landscape --></form>
+        <div id="notification">
+        <p>
+        	<b>5:06</b> <font color="#FF33FF">kikoo45</font> veut vous rencontrer<br /><br />
+        	<b>19.janv</b> <font color="#0066FF">jeunFille</font> : j’ai envi de te voir<br /><br />
+            <b>17.janv</b> <font color="#FF33FF">La5</font> : je suis à Paris
+        </p>
+        <!-- end notification --></div>
+        
+          <form id="form_portrait" method="post">
+          	<div id="form_portrait_input">
+                <input id="email_portrait" name="email" title="Email" placeholder="Email" type="email" data-i18n="[placeholder]login.email" />
+                <input id="password_portrait" name="password" title="Password" placeholder="Password" type="password" data-i18n="[placeholder]login.password" />
+            </div>
+            <div id="form_portrait_button">
+                <button class="connect reverse" type="submit"><p data-i18n="login.submit">Connect</p></button>
+                <button class="subscribe reverse" type="submit"><p data-i18n="subscribe.submit">Subscribe</p></button>
+            </div>
+            <div style="clear:both;"></div>
+            	<div id="social_l" class="bt_social">
+            	<button class="bt_facebook"></button>
+            	<button class="bt_twitter"></button>
+            	<button class="bt_feedback" formaction="mailto:feedback@liny.info"></button>
+            </div>
+            <div style="clear: both;">
+	            <span style="color: red; font-size: 12px;">Nous avons besoin de vous...</span>
+            </div>
+        <!-- end form_portrait --></form>
+        
+  <!-- end .content --></div>
+  <div class="footer">
+    <p>Copyright & co</p>
+  <!-- end .footer --></div>
+  
+  <div id="menu" class="menu">
+
+      <div class="ico_search menu_child">
+        <a href="index.html" title="Search"><span class="spanlinks"></span></a>
+        <a href="index.html" class="menuLinks" data-i18n="ns.menu:search">Search</a>
+      <!-- end ico_search --></div>
+      
+      <div class="ico_contacts menu_child">
+        <a href="contacts.html" title="Contacts"><span class="spanlinks"></span></a>
+        <a href="contacts.html" class="menuLinks" data-i18n="ns.menu:contacts">Contacts</a>
+      <!-- end ico_contacts --></div>
+      
+      <div id="ico_home" class="ico_home menu_child"></div>
+      
+      <div class="ico_filters menu_child">
+        <a href="filters.html" title="Filters"><span class="spanlinks"></span></a>
+        <a href="filters.html" class="menuLinks" data-i18n="ns.menu:filters">Filters</a>
+      <!-- end ico_filters --></div>
+      
+      
+      <div class="ico_profile menu_child">
+        <a href="profile.html" title="Profile"><span class="spanlinks"></span></a>
+        <a href="profile.html" class="menuLinks" data-i18n="ns.menu:profile">Profile</a>
+      <!-- end ico_profile --></div>
+      
+      <div class="ico_history menu_child">
+        <a href="history.html" title="History"><span class="spanlinks"></span></a>
+        <a href="history.html" class="menuLinks" data-i18n="ns.menu:history">History</a>
+      <!-- end ico_history --></div>
+     
+      <div class="ico_settings menu_child">
+        <a href="settings.html" title="Settings"><span class="spanlinks"></span></a>
+        <a href="settings.html" class="menuLinks" data-i18n="ns.menu:settings">Settings</a>
+      <!-- end ico_settings --></div>
+      
+      <div class="ico_faq menu_child">
+        <a href="faq.html" title="faq"><span class="spanlinks"></span></a>
+        <a href="faq.html" class="menuLinks" data-i18n="ns.menu:faq">FAQ</a>
+      <!-- end ico_settings --></div>
+  
+  	  <div id="menu_page" class="menu_page_container">
+  		<div class="content">
+        	<div id="button_search">
+  				<a href="#index"><div class="menu_page_icons"></div></a><a href="#index" class="menu_page_text" data-i18n="ns.menu:search">Search</a>
+            <!-- end button_search --></div>
+            <div id="button_contacts">
+  				<a href="#contacts"><div class="menu_page_icons"></div></a><a href="#contacts" class="menu_page_text" data-i18n="ns.menu:contacts">Contacts</a>
+            <!-- end button_contacts --></div>
+  			<div style="clear:both;">
+            
+            <div id="button_filters">
+  				<a href="#filters"><div class="menu_page_icons"></div></a><a href="#filters" class="menu_page_text" data-i18n="ns.menu:filters">Filters</a>
+            <!-- end button_filters --></div>
+            <div id="button_profile">
+  				<a href="#profile"><div class="menu_page_icons"></div></a><a href="#" class="menu_page_text" data-i18n="ns.menu:profile">Profile</a>
+            <!-- end button_profile --></div>
+            <div style="clear:both;">
+             <div id="button_history">
+  				<a href="#history"><div class="menu_page_icons"></div></a><a href="#history" class="menu_page_text" data-i18n="ns.menu:history">History</a>
+            <!-- end button_history --></div>
+            <div id="button_settings">
+  				<a href="#settings"><div class="menu_page_icons"></div></a><a href="#settings" class="menu_page_text" data-i18n="ns.menu:settings">Settings</a>
+            <!-- end button_settings --></div>
+            <div id="button_faq">
+  				<a href="#faq"><div class="menu_page_icons"></div></a><a href="#faq" class="menu_page_text" data-i18n="ns.menu:daq">FAQ</a>
+            <!-- end button_settings --></div>
+            <div style="clear:both;">
+  		<!-- end content --></div>
+  	  <!-- end menu_page --></div>
+  <!-- end menu --></div>
+<!-- end .container --></div>
+<!-- general scripts -->
+<script src="js/jquery.js"></script>
+<script src="js/i18next.js"></script>
+<script src="js/communication.class.js"></script>
+<script src="js/user.class.js"></script>
+<script src="js/lang.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/preload.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/konami.js"></script>
+<!-- page scripts -->
+<script src="js/sign_switcher.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/map.class.js"></script>
+<script src="//connect.facebook.net/en_US/all.js"></script>
+<script src="js/jsOAuth.js"></script>
+<script src="js/page.index.js"></script>
+</body>
+</html>

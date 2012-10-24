@@ -1,0 +1,751 @@
+/* landscape filters style sheet */
+
+@import url(../rates.css);
+
+
+#rate_age {
+	width: 550px;
+}
+
+
+#navbar {
+	display: none;
+}
+
+#navbar_landscape {
+	display: block;
+	width: 92%;
+	height: 42px;
+	line-height: 42px;
+	margin-top: 20px;
+	margin-left: 0;
+	white-space: nowrap;
+	border-bottom: 5px solid #333;
+}
+
+.chidren_navbar {
+	position: relative;
+	background-image: url(../images/profile/screen/tab_landscape.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	vertical-align: middle;
+	display: inline-block;
+	white-space: normal;
+	color: #FFF;
+	font-weight: bold;
+	height: 40px;
+	width: 140px;
+	margin-top: 7px;
+	padding-left: 20px;
+}
+
+.chidren_navbar:first-child {
+	margin-right: 30%;	
+}
+
+.chidren_navbar a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+.chidren_navbar_edit > a:last-child {
+	padding-left: 15px;
+}
+
+.chidren_navbar_edit {
+	background-image: url(../images/profile/screen/tab_landscape_edit_glow.png);
+	position: relative;
+	margin-left: 17%;
+	cursor: pointer;
+}
+
+.chidren_navbar_edit:hover {
+	background-image: url(../images/profile/screen/tab_landscape_edit.png);
+}
+
+
+#bt_personality, #bt_physique {
+	margin-top: -5px;
+	height: 40px;
+	width: 140px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#bt_personality	 {
+	margin-left: 12px;
+}
+
+#bt_edit {
+	margin-top: -5px;
+	height: 40px;
+	width: 50px;
+}
+
+.personality {
+	background: url(../images/profile/screen/bar_perso_body_edit.png);
+}
+
+
+.physique {
+	background: url(../images/profile/screen/bar_body_perso_edit.png);
+}
+
+.edit {
+	background: url(../images/profile/screen/bar_edit_body_perso.png);
+}
+
+.edit_personality {
+	background: url(../images/profile/screen/bar_perso_body.png);
+}
+
+
+.edit_physique {
+	background: url(../images/profile/screen/bar_body_perso.png);
+}
+
+
+#genderBox {
+	width: 180px;
+	position: absolute;
+	margin-left: 7%;
+	text-align: center;
+}
+
+#woman {
+	position: relative;
+	float: left;
+	width: 45px;
+	height: 90px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	cursor: pointer;
+}
+
+#man {
+	position: relative;
+	float: right;
+	width: 64px;
+	height: 90px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	cursor: pointer;
+}
+
+#portrait {
+	display: none;
+	margin-left: 30px;
+}
+
+#infos {
+	margin-left: 30px;
+}
+
+#tab_personality, #tab_physique  {
+	left: 10px;
+}
+
+#tab_personality {
+	display: inline;
+	float: left;
+	width: 40%;
+	margin-top: 40px;
+}
+
+#tab_physique {
+	display: inline;
+	float: left;
+	width: 50%;
+	margin-top: 40px;
+}
+
+#color_hair {
+	margin-left: 60%;
+	margin-top: -90px;
+}
+
+#color_eyes {
+	margin-top: 30px;
+}
+
+#color_skin {
+	margin-left: 60%;
+	margin-top: -55px;
+}
+
+.color_black:before, .color_blond:before, .color_blue:before, .color_brown:before, .color_ginger:before, .color_green:before, .color_grey:before, .color_white:before, .color_whiteh:before, .color_yellow:before {
+	margin-right: 10px;	
+}
+
+.color_black:before {
+	background-image: url(../images/forms/select_black.png);
+}
+
+.color_blond:before {
+	background-image: url(../images/forms/select_blond.png);
+}
+
+.color_blue:before {
+	background-image: url(../images/forms/select_blue.png);
+}
+
+.color_brown:before {
+	background-image: url(../images/forms/select_brown.png);
+}
+
+.color_ginger:before {
+	background-image: url(../images/forms/select_ginger.png);
+}
+
+.color_green:before {
+	background-image: url(../images/forms/select_green.png);
+}
+
+.color_grey:before {
+	background-image: url(../images/forms/select_grey.png);
+}
+
+.color_white:before {
+	background-image: url(../images/forms/select_white.png);
+}
+
+.color_whiteh:before {
+	background-image: url(../images/forms/select_whiteh.png);
+}
+
+.color_yellow:before {
+	background-image: url(../images/forms/select_yellow.png);
+}
+
+#avatar {
+	position: relative;
+	float: left;
+}
+
+#avatar img {
+	border: 3px solid #000000;
+	height: 170px;
+	width: 170px;
+}
+
+#avatar a {
+	position: absolute;
+	left: 3px;
+	bottom: 8px;;
+	background: url(../images/profile/screen/button_avatar_edit.png);
+	width: 60px;
+	height: 26px;
+	border: 0;
+	color: #fff;
+	font-weight: bold;
+	text-align: left;
+	cursor: pointer;
+	text-align:center;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#avatar a:hover {
+	background: url(../images/profile/screen/button_avatar_edit_glow.png);
+}
+
+#avatar a p {
+	margin-top: 3px;
+	margin-left: -12px;
+}
+
+#birthdate {
+	margin-top: 70px;
+	margin-left: 45px;
+	background-image: url(../images/forms/button_calendar.png);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+#mail {
+	margin-left: 45px;
+	margin-top: 25px;
+}
+
+#password {
+	margin-top: 25px;
+	margin-left: 45px;	
+}
+
+#firstname {
+	margin-top: 25px;
+	margin-left: 45px;	
+}
+
+#lastname {
+	margin-top: 25px;
+	margin-left: 45px;	
+}
+
+#silhouette_min {
+	margin-top: 0 !important;
+	position: relative;
+	float: left;
+	width: 49.5%;
+	border-right: solid #000 2px;
+}
+
+#silhouette_max {
+	margin-top: 0 !important;
+	position: relative;
+	float: right;
+	width: 49.5%;
+}
+
+.silhouette_warper {
+	position: relative;
+	height: 343px;
+	width: 110px;
+	margin-left: 40px;
+}
+
+#silhouette_img_min, #silhouette_img_max {
+	position: absolute;
+	bottom: 45px;
+	height: 313px;
+	width: 60px;
+	background-repeat: no-repeat;
+	background-size: 60px 313px;
+}
+
+.silhouette_woman {
+	background-image: url(../images/profile/woman/silhouette.png)
+}
+
+.silhouette_man {
+	background-image: url(../images/profile/man/silhouette.png)
+}
+
+#height_min, #height_max, #weight_min, #weight_max {
+	width: 50px;	
+}
+
+#slider_height_min, #slider_height_max {
+	position: absolute;
+	top: 10px;
+	height: 273px;
+	left: 90px;
+	width: 3px;
+}
+
+#slider_weight_min, #slider_weight_max {
+	position: absolute;
+	width: 106px;
+	top: 324px;
+	left: -36px;
+	height: 3px;
+}
+
+.ui-slider {
+	background-color: #000;
+	background-image: none;
+}
+
+.ui-slider a {
+	margin-top:-5px;
+}
+
+#age_min, #age_max {
+	width: 45px;
+	margin: 25px;
+}
+
+#slider_agerange {
+	width: 100%;
+	height: 5px;	
+}
+
+#slider_agerange a {
+	width: 8px;
+	background-image: url(../images/menu/menu_background.png);
+	border: solid #000 1px;
+	cursor: pointer;
+}
+
+#slider_agerange div {
+	background-image: url(../images/menu/menu_background.png);
+}
+
+#silhouette_min, #silhouette_max {
+	margin-top: 100px;	
+}
+
+#rate_party_min, #rate_alcohol_min, #rate_tobacco_min, #rate_piercing_min,  #rate_tatoo_min, #haircut_min {
+	position: relative;
+	float: left;
+	border-right: solid #000 2px;
+	width: 49.5%;
+}
+
+#rate_party_max, #rate_alcohol_max, #rate_tobacco_max, #rate_piercing_max,  #rate_tatoo_max, #haircut_max {
+	position: relative;
+	float: right;
+	width: 49.5%;
+}
+
+#tab_personality p, #tab_physique p {
+	text-align: center;
+}
+
+#relationship {
+	margin-left: 38%;
+	margin-bottom: 20px;
+}
+
+#slider_height_min a, #slider_weight_min a, #slider_height_max a, #slider_weight_max a {
+	color: black;
+	font-weight: normal;
+	text-decoration: none;
+	font-size: 9pt;
+	width: 25px;
+	background-image: url(../images/background_grey.png);
+	border: none;
+	line-height: 20px;
+	padding-bottom: 7px;
+	margin-left: -7px;
+	cursor: pointer;
+}
+
+#rate_party {
+	height: 100px;
+	white-space: nowrap;
+	width: 160px;
+}
+
+#rate_party_text {
+	text-align: center;
+}
+
+#rate_alcohol {
+	margin-top: 40px;
+	height: 100px;
+	white-space: nowrap;
+	width: 140px;
+}
+
+#rate_alcohol_text {
+	text-align: center;
+}
+
+#rate_tobacco {
+	margin-top: 50px;
+	height: 100px;
+	white-space: nowrap;
+	width: 120px;
+}
+
+#rate_tobacco_text {
+	text-align: center;
+}
+
+#rate_tatoo {
+	width: 190px;
+}
+
+#rate_tatoo_text {
+	text-align: center;
+}
+
+#rate_piercing {
+	width:140px;
+}
+
+#rate_piercing_text {
+	text-align: center;
+}
+
+#haircut {
+	width: 116px;
+}
+
+#rate_haircut_min, #rate_haircut_max {
+	width: 116px;
+	height: 42px;
+	border-bottom: 5px solid #000;
+}
+
+#haircut p {
+	text-align: center;
+}
+
+.haircut_1 {
+	position: relative;
+	background-color: #000;
+	vertical-align: bottom;
+	display: inline-block;
+	white-space: normal;
+	width: 8px;
+	height: 12px;
+}
+
+.haircut_1_blank {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.3);
+	vertical-align: bottom;
+	display: inline-block;
+	white-space: normal;
+	width: 8px;
+	height: 12px;
+}
+
+.haircut_2 {
+	position: relative;
+	background-color: #000;
+	vertical-align: bottom;
+	display: inline-block;
+	white-space: normal;
+	width: 8px;
+	height: 22px;
+	margin-left: 22px;
+}
+
+.haircut_2_blank {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.3);
+	vertical-align: bottom;
+	display: inline-block;
+	white-space: normal;
+	width: 8px;
+	height: 22px;
+	margin-left: 22px;
+}
+
+.haircut_3 {
+	position: relative;
+	background-color: #000;
+	vertical-align: bottom;
+	display: inline-block;
+	white-space: normal;
+	width: 8px;
+	height: 32px;
+	margin-left: 22px;
+}
+
+.haircut_3_blank {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.3);
+	vertical-align: bottom;
+	display: inline-block;
+	white-space: normal;
+	width: 8px;
+	height: 32px;
+	margin-left: 22px;
+}
+
+.haircut_4 {
+	position: relative;
+	background-color: #000;
+	vertical-align: bottom;
+	display: inline-block;
+	white-space: normal;
+	width: 8px;
+	height: 42px;
+	margin-left: 22px;
+}
+
+.haircut_4_blank {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.3);
+	vertical-align: bottom;
+	display: inline-block;
+	white-space: normal;
+	width: 8px;
+	height: 42px;
+	margin-left: 22px;
+}
+
+#preload_bt_avatar_edit {
+	background: url(../images/profile/screen/button_avatar_edit_glow.png);	
+}
+
+#avatarfile {
+	visibility: hidden;
+}
+
+#color_hair_title {
+	margin-top: 30px;	
+}
+
+#squares_color_hair, #squares_color_eyes, #squares_color_skin {
+	line-height: 7.75%;
+	height: 49px;
+	white-space: nowrap;
+	margin-bottom: 30px;
+	padding-left: 14%;
+	overflow: hidden;
+}
+
+.square_edit > canvas {
+	cursor: pointer;
+}
+
+#squares_color_hair canvas:not(:first-child), #squares_color_eyes canvas:not(:first-child), #squares_color_skin canvas:not(:first-child) {
+	display: inline-block;
+	position: relative;
+	white-space: normal;
+	margin-left: -245px;
+}
+
+/* correct a bug... surely dirty */
+#squares_color_hair {
+	width: 353px;
+}
+
+#squares_color_eyes {
+	width: 171px;
+}
+
+#squares_color_skin {
+	width: 232px;
+}
+
+#personality_rate_block {
+	width: 100%;
+}
+
+#min_title {
+	position: relative;
+	float: left;
+	width: 49.5%;
+	border-right: solid #000 2px;
+	text-align: center;
+}
+
+#max_title {
+	position: relative;
+	float: right;
+	width: 49.5%;
+	text-align: center;
+}
+
+/*dirty fix*/
+#rate_party_max_text {
+	height: 22px;
+}
+
+#driving_license {
+	margin-top: 170px;
+}
+
+#driving_license_car {
+	margin-top: 30px;
+}
+
+.driving_license_none {
+	background-image: url(../images/profile/screen/driving_license_none.png);
+	width: 63px;
+	height: 59px;
+	margin-left: 7px;
+}
+
+.driving_license_none_blank {
+	background-image: url(../images/profile/screen/driving_license_none_blank.png);
+	width: 63px;
+	height: 59px;
+	margin-left: 20px;
+}
+
+.driving_license_car {
+	background-image: url(../images/profile/screen/driving_license_car.png);
+	width: 146px;
+	height: 48px;
+	margin-left: 30px;
+}
+
+.driving_license_car_blank {
+	background-image: url(../images/profile/screen/driving_license_car_blank.png);
+	width: 146px;
+	height: 48px;
+	margin-left: 30px;
+}
+
+.driving_license_motorcycle {
+	background-image: url(../images/profile/screen/driving_license_motorcycle.png);
+	width: 94px;
+	height: 43px;
+	margin-left: 30px;
+}
+
+.driving_license_motorcycle_blank {
+	background-image: url(../images/profile/screen/driving_license_motorcycle_blank.png);
+	width: 94px;
+	height: 43px;
+	margin-left: 30px;
+}
+
+.driving_license_none, .driving_license_none_blank, .driving_license_car, .driving_license_car_blank, .driving_license_motorcycle, .driving_license_motorcycle_blank {
+	position: relative;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	white-space: normal;
+}
+
+#live_with {
+	margin-top: 30px;
+}
+
+#live_w_parents {
+	margin-top: 30px;
+	margin-left: 40px;
+}
+
+.live_w_parents_blank, .live_w_mates_blank, .live_alone_blank, .live_w_parents_woman, .live_w_mates_woman, .live_alone_woman, .live_w_parents_man, .live_w_mates_man, .live_alone_man {
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+}
+
+.live_w_parents_woman {
+	background-image: url(../images/profile/woman/live_w_parents.png);
+}
+
+.live_w_mates_woman {
+	background-image: url(../images/profile/woman/live_w_mates.png);
+}
+
+.live_alone_woman {
+	background-image: url(../images/profile/woman/live_alone.png);
+}
+
+.live_w_parents_man {
+	background-image: url(../images/profile/man/live_w_parents.png);
+}
+
+.live_w_mates_man {
+	background-image: url(../images/profile/man/live_w_mates.png);
+}
+
+.live_alone_man {
+	background-image: url(../images/profile/man/live_alone.png);
+}
+
+.live_w_parents_blank {
+	opacity: 0.3;
+	background-image: url(../images/profile/man/live_w_parents_blank.png);
+}
+
+.live_w_mates_blank {
+	opacity: 0.3;
+	background-image: url(../images/profile/man/live_w_mates_blank.png);
+}
+
+.live_alone_blank {
+	opacity: 0.3;
+	background-image: url(../images/profile/man/live_alone_blank.png);
+}
+

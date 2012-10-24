@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Liny - Profile</title>
+
+<!-- corps css -->
+<link href="css/blitzer/jquery-ui.css" type="text/css" rel="stylesheet" />
+<link href="css/app/landscape.css" rel="stylesheet" type="text/css" />
+<link href="css/app/portrait.css" rel="stylesheet" type="text/css" media="only screen and (max-width:720px)" />
+<!-- page css -->
+<link href="css/app/looking_for.css" rel="stylesheet" type="text/css" />
+<link href="css/app/profile_portrait.css" rel="stylesheet" type="text/css" />
+<link href="css/app/landscape/profile.css" rel="stylesheet" type="text/css" />
+<link href="css/app/portrait/profile.css" rel="stylesheet" type="text/css" media="only screen and (max-width:720px)" />
+<script charset="utf-8" src="js/cordova.js"></script>
+</head>
+<body>
+<div class="container">
+	<div id='fb-banner'>Nous avons besoin de vous, <a style="color: #98d3f4; margin-right: 10px;" href="mailto:feedback@liny.info">donnez-nous vos impressions!</a></div>
+  <div id="menu_landscape" class="menu_landscape">
+       <div class="ico_search menu_landscape_child">
+        <a href="index.html" title="Search"><span class="spanlinks"></span></a>
+        <a href="index.html" class="menuLinks" data-i18n="ns.menu:search">Search</a>
+      <!-- end ico_search --></div>
+      
+      <div class="ico_contacts menu_landscape_child">
+        <a href="contacts.html" title="Contacts"><span class="spanlinks"></span></a>
+        <a href="contacts.html" class="menuLinks" data-i18n="ns.menu:contacts">Contacts</a>
+      <!-- end ico_contacts --></div>
+      
+      <div class="ico_filters menu_landscape_child">
+        <a href="filters.html" title="Filters"><span class="spanlinks"></span></a>
+        <a href="filters.html" class="menuLinks" data-i18n="ns.menu:filters">Filters</a>
+      <!-- end ico_filters --></div>
+      
+      
+      <div class="ico_profile menu_landscape_child">
+        <a href="profile.html" title="Profile"><span class="spanlinks"></span></a>
+        <a href="profile.html" class="menuLinks" data-i18n="ns.menu:profile">Profile</a>
+      <!-- end ico_profile --></div>
+      
+      <div class="ico_history menu_landscape_child">
+        <a href="history.html" title="History"><span class="spanlinks"></span></a>
+        <a href="history.html" class="menuLinks" data-i18n="ns.menu:history">History</a>
+      <!-- end ico_history --></div>
+     
+      <div class="ico_settings menu_landscape_child">
+        <a href="settings.html" title="Settings"><span class="spanlinks"></span></a>
+        <a href="settings.html" class="menuLinks" data-i18n="ns.menu:settings">Settings</a>
+      <!-- end ico_settings --></div>
+      
+      <div class="ico_faq 	 menu_landscape_child">
+        <a href="faq.html" title="faq"><span class="spanlinks"></span></a>
+        <a href="faq.html" class="menuLinks" data-i18n="ns.menu:faq">FAQ</a>
+      <!-- end ico_faq --></div>
+  <!-- end menu_landscape --></div>
+
+ <div id="menu_top">
+  	<p>Liny</p><!--<img id="logo" src="css/app/images/logo.png" />-->
+    <form id="connectform_top" method="post">
+        <input id="top_email" name="email" title="Email" placeholder="Email" type="text" data-i18n="[placeholder]ns.menu:login.email" />
+        <input id="top_password" name="password" title="Password" placeholder="Password" type="password" data-i18n="[placeholder]ns.menu:login.password" />
+        <button id="top_connect" class="connect reverse" type="submit"><p data-i18n="ns.menu:login.submit">Connect</p></button>
+    </form>
+		<div id="div_ads"></div>
+		<button id="top_subscribe" class="subscribe reverse" type="submit"><p data-i18n="ns.menu:subscribe">Subscribe</p></button>
+		<a id="top_logout" href="?logout=true">logout</a>
+    <div id="lang">
+    	<ul>
+        	<li>en</li>
+          <li data-lang="en">en</li>
+          <li data-lang="fr">fr</li>
+      </ul>
+    <!-- end lang --></div>
+    <div id="chat_open" data-i18n="ns.menu:contacts_online">
+			Contacts Online
+    </div>
+    <div id="chat_bar">
+    	<div id="chat_bar_contacts"></div>
+        <div id="chat_bar_msgs"></div>
+    	<input type="text" />
+    </div>
+  <!-- end menu_top --></div>
+  
+  <div class="content">
+  <div>
+    <div id="infos">
+        <div id="avatar" class="avatar">
+            <img data-bind="user.avatar" class="avatarImg" src="css/app/images/profile/woman/avatar_blank.png" />
+            <div id="avatar_portrait"></div>
+        <!-- end avatar --></div>
+				<div class="gauge_modifier plus"></div>
+				<div class="gauge_modifier minus"></div>
+        <div data-bind="user.trustGauge" class="gauge gauge_lvl2"></div>
+        <div data-bind="user.matchPercentage" class="heart heart_15_39">XX</div>
+        <div style="clear: both;"></div>
+        <div id="name"><span data-bind="user.profile.firstname">???</span> <span data-bind="user.profile.lastname">???</span> <span data-bind="user.profile.gender" class="sign_woman" style="width:18px;height:20px;display:inline-block;background-repeat:no-repeat;background-position:bottom;background-size:18px 20px;"></span></div>
+        <div id="age"><span data-bind="user.profile.birthdate">..</span> <span data-i18n="general.years">Y. O.</span></div>
+        <div id="lookingfor">
+         	<span data-bind="user.filters.personality.relationship.gender" data-i18n="lookingfor">Looking for</span>: <span data-bind="user.filters.personality.relationship.type"></span>
+        	<br />
+        	<div id="lookingfor_man" class="lookingfor_man"></div>
+        	<div id="lookingfor_woman" class="lookingfor_woman_blank"></div>
+        <!-- end lookingfor --></div>
+    <!-- end infos --></div>
+    <div id="global_portrait">
+        <div class="portrait">
+            <div class="skin woman_skin woman_skin_white"></div>
+            <div class="hair woman_hair_long woman_hair_long_black"></div>
+            <div class="eyes woman_eyes woman_eyes_brown"></div>
+        <!-- end portrait --></div>
+    <!-- end global_portrait --></div>
+    <div style="clear:both;"></div>
+    </div>
+    <div id="navbar" class="personality">
+        <div id="bt_personality" class="chidren_navbar"><a href="#personality"><span class="spanlinks"></span></a><a href="#personality" data-i18n="personality.title">Personality</a>
+        <!-- end bt_personality --></div>
+        <div id="bt_physique" class="chidren_navbar"><a href="#physique"><span class="spanlinks"></span></a><a href="#physique" data-i18n="physique.title">Physique</a>
+        <!-- end bt_physique --></div>
+        <div id="bt_edit" class="chidren_navbar"><a href="profile_edit.html"><span class="spanlinks"></span></a><a href="profile_edit.html" data-i18n="edit">Edit</a>
+        <!-- end bt_edit --></div>
+    <!-- end navbar --></div>
+    <div id="navbar_landscape">
+        <div data-i18n="personality.title" class="chidren_navbar">Personality</div>
+        <div data-i18n="physique.title" class="chidren_navbar">Physique</div>
+        <div class="chidren_navbar chidren_navbar_edit">
+					<a href="profile_edit.html"><span class="spanlinks"></span></a>
+					<a href="profile_edit.html" data-i18n="edit">Edit</a>
+				</div>
+    <!-- end navbar_landscape --></div>
+    <div id="tab_personality">
+        <div id="relationship"><b data-i18n="personality.relationship.title">Relationship Type</b>: <span data-bind="user.personality.relationship.type">N/A</span></div>
+        <div id="sports"><b data-i18n="personality.sports">Sports</b>: <span data-bind="user.personality.interest.sports">N/A</span></div>
+        <div id="music"><b data-i18n="personality.music">Musics</b>: <span data-bind="user.personality.interest.musics">N/A</span></div>
+        <div id="movies"><b data-i18n="personality.movies">Movies</b>: <span data-bind="user.personality.interest.movies">N/A</span></div> 
+        <div id="books"><b data-i18n="personality.books">Books</b>: <span data-bind="user.personality.interest.readings">N/A</span></div> 
+        <div id="hobbies"><b data-i18n="personality.hobbies">Other hobbies</b>: <span data-bind="user.personality.interest.hobbies">N/A</span></div>
+        <div id="studies"><b data-i18n="personality.studies">Studies</b>: <span data-bind="user.personality.studies">N/A</span></div>
+        <div id="job"><b data-i18n="personality.job">Job</b>: <span data-bind="user.personality.jobs">N/A</span></div>
+        <div id="spoken_lang"><b data-i18n="personality.lang">Spoken languages</b>: <span data-bind="user.personality.languages">N/A</span></div>
+        <div id="rate_party"><b data-i18n="personality.rate.party.title">Party rate</b>: <span id="rate_party_text" data-bind="user.personality.rate.party">N/A</span><br />
+            <div id="party_0" class="party_0_blank"></div>
+            <div id="party_1" class="party_1_blank"></div>
+            <div id="party_2" class="party_2_blank"></div>
+            <div id="party_3" class="party_3_blank"></div>
+        <!-- end rate_party --></div><br />
+        <div id="rate_alcohol"><b data-i18n="personality.rate.alcohol.title">Alcohol rate</b>: <span id="rate_alcohol_text" data-bind="user.personality.rate.alcohol">N/A</span><br />
+            <div id="alcohol_0" class="alcohol_0_blank"></div>
+            <div id="alcohol_1" class="alcohol_1_blank"></div>
+            <div id="alcohol_2" class="alcohol_2_blank"></div>
+            <div id="alcohol_3" class="alcohol_3_blank"></div>
+        <!-- end rate_alcohol --></div>
+        <div id="rate_tobacco"><b data-i18n="personality.rate.tobacco.title">tobacco rate</b>: <span id="rate_tobacco_text" data-bind="user.personality.rate.tobacco">N/A</span><br />
+                <div id="tobacco_0" class="tobacco_0_blank"></div>
+            <div id="tobacco_1" class="tobacco_1_blank"></div>
+            <div id="tobacco_2" class="tobacco_2_blank"></div>
+            <div id="tobacco_3" class="tobacco_3_blank"></div>
+            <div id="tobacco_4" class="tobacco_4_blank"></div>
+        <!-- end rate_tobacco --></div>
+        <div id="driving_license">
+            <b data-i18n="personality.driving_license.title">Driving License</b>: <span data-bind="user.profile.license">N/A</span><br />
+            <div id="driving_license_car" class="driving_license_car_blank"></div>
+            <div id="driving_license_motorcycle" class="driving_license_motorcycle_blank"></div>
+        <!-- end driving_license --></div>
+				<div id="live_with">
+            <b data-i18n="personality.live_with.title">Live with</b>: <span data-bind="user.profile.live_with">N/A</span><br />
+            <div id="live_w_parents" class="live_w_parents_blank"></div>
+						<div id="live_w_mates" class="live_w_mates_blank"></div>
+						<div id="live_alone" class="live_alone_woman"></div>
+        <!-- end driving_license --></div>
+    <!-- end tab_personality --></div>
+    <div id="tab_physique">
+      <div id="haircut" style="margin: 0 15px;">
+                <b data-i18n="physique.rate.haircut.title">Haircut</b>: <span data-bind="user.physique.size.hair">medium</span>
+                <div id="rate_haircut">
+                    <div id="haircut_1" class="haircut_1"></div>
+                    <div id="haircut_2" class="haircut_2"></div>
+                    <div id="haircut_3" class="haircut_3"></div>
+                    <div id="haircut_4" class="haircut_4"></div>
+                <!-- end rate_haircut --></div>
+                <p id="rate_haircut_text">long</p>
+      <!-- end haircut --></div>
+      
+        <div id="hair"><b data-i18n="physique.color.body.hair">Hair</b>: <span data-bind="user.physique.color.hair" data-i18n="physique.color.black" class="color_black">black</span></div>
+        <div id="eyes"><b data-i18n="physique.color.body.eyes">Eyes</b>: <span data-bind="user.physique.color.eyes" class="color_brown" data-i18n="physique.color.brown">brown</span></div>
+        <div id="skin"><b data-i18n="physique.color.body.skin">Skin</b>: <span data-bind="user.physique.color.skin" class="color_white" data-i18n="physique.appearance.caucasian">caucasian</span></div>
+        <div style="clear:both;"></div>
+        <div id="silhouette_wrapper">
+        <div id="height"><b data-i18n="physique.height">Height</b>: <span data-bind="user.physique.size.height">N/A</span></div>
+        <div id="weight"><b data-i18n="physique.weight">Weight</b>: <span data-bind="user.physique.size.weight">N/A</span></div>
+        <div id="silhouette">
+                <div id="silhouette_img" class="silhouette_woman"></div>
+                <div id="slider_height"></div>
+                <div id="slider_weight"></div>
+            <!-- end silhouette --></div>
+            <!-- end silhouette_wrapper --></div>
+        <div style="clear:both;"></div>
+        <div id="rate_piercing"><b data-i18n="physique.rate.piercing.title">Piercing</b>: <span id="rate_piercing_text" data-bind="user.physique.rate.piercing">N/A</span><br/>
+            <div id="piercing_0" class="piercing_0_blank"></div>
+            <div id="piercing_1" class="piercing_1_blank"></div>
+            <div id="piercing_2" class="piercing_2_blank"></div>
+            <div id="piercing_3" class="piercing_3_blank"></div>
+        <!-- end rate_piercing --></div>
+        <div id="rate_tatoo"><b data-i18n="physique.rate.tatoo.title">Tatoo</b>: <span id="rate_tatoo_text" data-bind="user.physique.rate.tatoo">N/A</span><br />
+            <div id="tatoo_0" class="tatoo_0_blank"></div>
+            <div id="tatoo_1" class="tatoo_1_blank"></div>
+            <div id="tatoo_2" class="tatoo_2_blank"></div>
+            <div id="tatoo_3" class="tatoo_3_blank"></div>
+        <!-- end rate_tatoo --></div>
+    <!-- end tab_physique --></div>
+		<div style="clear:both;"></div>
+  <!-- end .content --></div>
+  <div class="footer">
+    <p>Copyright & co</p>
+    <!-- end .footer --></div>
+		<div id="menu" class="menu">
+
+	      <div class="ico_search menu_child">
+	        <a href="index.html" title="Search"><span class="spanlinks"></span></a>
+	        <a href="index.html" class="menuLinks" data-i18n="ns.menu:search">Search</a>
+	      <!-- end ico_search --></div>
+
+	      <div class="ico_contacts menu_child">
+	        <a href="contacts.html" title="Contacts"><span class="spanlinks"></span></a>
+	        <a href="contacts.html" class="menuLinks" data-i18n="ns.menu:contacts">Contacts</a>
+	      <!-- end ico_contacts --></div>
+
+	      <div id="ico_home" class="ico_home menu_child"></div>
+
+	      <div class="ico_filters menu_child">
+	        <a href="filters.html" title="Filters"><span class="spanlinks"></span></a>
+	        <a href="filters.html" class="menuLinks" data-i18n="ns.menu:filters">Filters</a>
+	      <!-- end ico_filters --></div>
+
+
+	      <div class="ico_profile menu_child">
+	        <a href="profile.html" title="Profile"><span class="spanlinks"></span></a>
+	        <a href="profile.html" class="menuLinks" data-i18n="ns.menu:profile">Profile</a>
+	      <!-- end ico_profile --></div>
+
+	      <div class="ico_history menu_child">
+	        <a href="history.html" title="History"><span class="spanlinks"></span></a>
+	        <a href="history.html" class="menuLinks" data-i18n="ns.menu:history">History</a>
+	      <!-- end ico_history --></div>
+
+	      <div class="ico_settings menu_child">
+	        <a href="settings.html" title="Settings"><span class="spanlinks"></span></a>
+	        <a href="settings.html" class="menuLinks" data-i18n="ns.menu:settings">Settings</a>
+	      <!-- end ico_settings --></div>
+	      
+      <div class="ico_faq menu_child">
+        <a href="faq.html" title="faq"><span class="spanlinks"></span></a>
+        <a href="faq.html" class="menuLinks" data-i18n="ns.menu:faq">FAQ</a>
+      <!-- end ico_settings --></div>
+
+	  	  <div id="menu_page" class="menu_page_container">
+	  		<div class="content">
+	        	<div id="button_search">
+	  				<a href="#index"><div class="menu_page_icons"></div></a><a href="#index" class="menu_page_text" data-i18n="ns.menu:search">Search</a>
+	            <!-- end button_search --></div>
+	            <div id="button_contacts">
+	  				<a href="#contacts"><div class="menu_page_icons"></div></a><a href="#contacts" class="menu_page_text" data-i18n="ns.menu:contacts">Contacts</a>
+	            <!-- end button_contacts --></div>
+	  			<div style="clear:both;">
+
+	            <div id="button_filters">
+	  				<a href="#filters"><div class="menu_page_icons"></div></a><a href="#filters" class="menu_page_text" data-i18n="ns.menu:filters">Filters</a>
+	            <!-- end button_filters --></div>
+	            <div id="button_profile">
+	  				<a href="#profile"><div class="menu_page_icons"></div></a><a href="#" class="menu_page_text" data-i18n="ns.menu:profile">Profile</a>
+	            <!-- end button_profile --></div>
+	            <div style="clear:both;">
+	             <div id="button_history">
+	  				<a href="#history"><div class="menu_page_icons"></div></a><a href="#history" class="menu_page_text" data-i18n="ns.menu:history">History</a>
+	            <!-- end button_history --></div>
+	            <div id="button_settings">
+	  				<a href="#settings"><div class="menu_page_icons"></div></a><a href="#settings" class="menu_page_text" data-i18n="ns.menu:settings">Settings</a>
+	            <!-- end button_settings --></div>
+	            <div style="clear:both;">
+	  		<!-- end content --></div>
+	  	  <!-- end menu_page --></div>
+	  <!-- end menu --></div>
+<!-- end .container --></div>
+
+<script src="js/jquery.js"></script>
+<script src="js/i18next.js"></script>
+<script src="js/user.class.js"></script>
+<script src="js/communication.class.js"></script>
+<script src="js/lang.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/preload.js"></script>
+<script src="js/portrait_maker.js"></script>
+<script src="js/sign_switcher.js"></script>
+<script src="js/rates.js"></script>
+<script src="js/text_colors.js"></script>
+<script src="js/bindings.js"></script>
+<script src="js/page.profile.js"></script>
+</body>
+</html>

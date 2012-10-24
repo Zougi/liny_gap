@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Liny - Profile</title>
+<!-- general css -->
+<link href="css/blitzer/jquery-ui.css" type="text/css" rel="stylesheet" />
+<link href="css/app/landscape.css" rel="stylesheet" type="text/css" />
+<link href="css/app/portrait.css" rel="stylesheet" type="text/css" media="only screen and (max-width:720px)" />
+<!-- page css -->
+<link href="css/app/profile_portrait.css" rel="stylesheet" type="text/css" />
+<link href="css/app/landscape/profile.css" rel="stylesheet" type="text/css" />
+<link href="css/app/portrait/profile.css" rel="stylesheet" type="text/css" media="only screen and (max-width:720px)" />
+<link href="css/app/landscape/edit.css" rel="stylesheet" type="text/css" />
+<link href="css/app/portrait/edit.css" rel="stylesheet" type="text/css" media="only screen and (max-width:720px)" />
+<script charset="utf-8" src="js/cordova.js"></script>
+</head>
+<body>
+<div class="container">
+	<div id='fb-banner'>Nous avons besoin de vous, <a style="color: #98d3f4; margin-right: 10px;" href="mailto:feedback@liny.info">donnez-nous vos impressions!</a></div>
+  <div id="menu_landscape" class="menu_landscape">
+       <div class="ico_cancel menu_landscape_child menu_edit_child">
+    	<a href="profile.html" title="Cancel"><span class="spanlinks"></span></a>
+    <!-- end ico_cancel --></div>
+    
+    <div class="ico_save menu_landscape_child menu_edit_child">
+    	<a href="#" title="Save" data-i18n="general.submit">Save</a><a href="#" title="Register"><span class="spanlinks"></span></a>
+    <!-- end ico_save --></div>
+  <!-- end menu_landscape --></div>
+ <div id="menu_top">
+  	<p>Liny</p><!--<img id="logo" src="css/app/images/logo.png" />-->
+    <form id="connectform_top" method="post">
+        <input id="top_email" name="email" title="Email" placeholder="Email" type="text" data-i18n="[placeholder]ns.menu:login.email" required />
+        <input id="top_password" name="password" title="Password" placeholder="Password" type="password" data-i18n="[placeholder]ns.menu:login.password" required />
+        <button id="top_connect" class="connect reverse" type="submit"><p data-i18n="ns.menu:login.submit">Connect</p></button>
+    </form>
+		<div id="div_ads"></div>
+		<button id="top_subscribe" class="subscribe reverse" type="submit"><p data-i18n="ns.menu:subscribe">Subscribe</p></button>
+		<a id="top_logout" href="?logout=true">logout</a>
+    <div id="lang">
+    	<ul>
+        	<li>en</li>
+          <li data-lang="en">en</li>
+          <li data-lang="fr">fr</li>
+      </ul>
+    <!-- end lang --></div>
+    <div id="chat_open" data-i18n="ns.menu:contacts_online">
+			Contacts Online
+    </div>
+    <div id="chat_bar">
+    	<div id="chat_bar_contacts"></div>
+        <div id="chat_bar_msgs"></div>
+    	<input type="text" />
+    </div>
+  <!-- end menu_top --></div>
+  
+  <div class="content">
+  	<form>
+    	<input id="avatarfile" name="avatar" type="file" />
+        <div id="infos">
+        	<div class="infos_identity">
+                <div class="avatar">
+                    <img data-bind="user.avatar" class="avatarImg" src="css/app/images/profile/woman/avatar_blank.png" />
+                    <a><span class="spanlinks"></span><p data-i18n="general.avatar_button">Edit</p></a>
+                <!-- end avatar --></div>
+                <input name="firstname" title="Firstname" placeholder="Firstname" type="text" class="box_identity" data-i18n="[placeholder]general.firstname" data-bind="user.profile.firstname" required autocomplete="on" />
+                <div class="check"></div>
+				<input name="lastname" title="Lastname" placeholder="Lastname" type="text" class="box_identity" data-i18n="[placeholder]general.lastname" data-bind="user.profile.lastname" required autocomplete="on" />
+                <div class="check"></div>
+            <!-- end infos_identity --></div>
+            <div class="infos_log">
+                <input name="mail" title="Email" placeholder="Email" type="email" class="box_log" data-i18n="[placeholder]general.email" data-bind="user.profile.email" required autocomplete="on" />
+                <div class="check"></div>
+                <input name="password" title="Password" placeholder="Password" type="password" class="box_log" data-i18n="[placeholder]general.password" data-bind="user.profile.password" required autocomplete="on" />
+                <div class="check"></div>
+                <input name="birthdate" title="Birthdate" placeholder="Birthdate" type="text" class="box_birthdate" data-i18n="[placeholder]general.birthdate" data-bind="user.profile.birthdate" required autocomplete="on" />
+                <div class="check"></div>
+            <!-- end infos_log --></div>
+            <div style="clear: both;"></div>
+        <!-- end infos --></div>
+        <div id="global_portrait">
+        	<div id="global_portrait_wrapper">
+                <div class="portrait">
+                	<p data-i18n="msg_tap_face">tap on the face to switch selector</p>
+                    <div id="skin" class="skin woman_skin woman_skin_white"></div>
+                    <div id="hair" class="hair woman_hair_long woman_hair_long_black"></div>
+                    <div id="eyes" class="eyes woman_eyes woman_eyes_brown"></div>
+                    <div id="skin_empty"></div>
+                    <div id="eyes_empty"></div>
+                <!-- end portrait --></div>
+                <div id="color_picker"></div>
+            <!-- end global_portrait_warpper --></div>
+        <!-- end global_portrait --></div>
+        <div style="clear:both;"></div>
+        <div id="navbar" class="edit_personality">
+            <div id="bt_personality" class="chidren_navbar">
+            	<a href="#personality"><span class="spanlinks"></span></a>
+                <a href="#personality" data-i18n="personality.title">Personality</a>
+            <!-- end bt_personality --></div>
+            <div id="bt_physique" class="chidren_navbar">
+            	<a href="#physique"><span class="spanlinks"></span></a>
+                <a href="#physique" data-i18n="physique.title">Physique</a>
+            <!-- end bt_physique --></div>
+        <!-- end navbar --></div>
+        <div id="navbar_landscape">
+    		<div data-i18n="personality.title" class="chidren_navbar">Personality</div>
+        	<div data-i18n="physique.title" class="chidren_navbar">Physique</div>
+		<!-- end navbar_landscape --></div>
+        <div id="tab_wrapper">
+        <div id="tab_personality">
+        	<!--<label data-i18n="personality.description" for="description">Description</label>
+            <textarea></textarea>-->
+        	<label data-i18n="personality.sports" for="sports">Sports</label>
+            <div class="fakeInput">
+               <input id="sports" name="sports" class="autocompletebox" title="Sports" placeholder="Add sports, ..." type="text" data-i18n="[placeholder]personality.comment.sports" data-bind="user.personality.interest.sports" autocomplete="off" />
+            </div>
+            <label data-i18n="personality.musics" for="musics">Musics</label>
+            <div class="fakeInput">
+            	<input id="musics" name="musics" class="autocompletebox" title="Musics" placeholder="Add bands, singers, ..." type="text" data-i18n="[placeholder]personality.comment.music" data-bind="user.personality.interest.musics" autocomplete="off" />
+            </div>
+            <label data-i18n="personality.movies" for="movies">Movies</label>
+            <div class="fakeInput">
+            	<input id="movies" name="movies" class="autocompletebox" title="Movies" placeholder="Add movies..." type="text" data-i18n="[placeholder]personality.comment.movies" data-bind="user.personality.interest.movies" autocomplete="off" />
+            </div>
+            <label data-i18n="personality.books" for="books">Reading</label>
+            <div class="fakeInput">
+            	<input id="books" name="books" class="autocompletebox" title="Books" placeholder="Add books, comics, magazines, ..." type="text" data-i18n="[placeholder]personality.comment.books" data-bind="user.personality.interest.readings" autocomplete="off" />
+            </div>
+            <label data-i18n="personality.hobbies" for="hobbies">Hobbies</label>
+            <div class="fakeInput">
+            	<input id="hobbies" name="hobbies" class="autocompletebox" title="Hobbies" placeholder="Add hobbies..." type="text" data-i18n="[placeholder]personality.comment.hobbies" data-bind="user.personality.interest.hobbies" autocomplete="off" />
+            </div>
+            <label data-i18n="personality.studies" for="studies">Studies</label>
+            <div class="fakeInput">
+            	<input id="studies" name="studies" class="autocompletebox" title="Studies" placeholder="Add schools, studies, ..." type="text" data-i18n="[placeholder]personality.comment.studies" data-bind="user.personality.studies" autocomplete="off" />
+            </div>
+            <label data-i18n="personality.job" for="jobs">Job</label>
+            <div class="fakeInput">
+            	<input id="job" name="job" class="autocompletebox" title="Job" placeholder="Add past or present jobs..." type="text" data-i18n="[placeholder]personality.comment.job" data-bind="user.personality.jobs" autocomplete="off" />
+            </div>
+            <label data-i18n="personality.lang" for="spoken_lang">Lang</label>
+            <div class="fakeInput">
+            	<input id="spoken_lang" name="lang" class="autocompletebox" title="Lang" placeholder="Add languages you speak..." type="text" data-i18n="[placeholder]personality.comment.lang" data-bind="user.personality.languages" autocomplete="off" />
+            </div>
+            <div id="rate_party">
+            	<p><b data-i18n="personality.rate.party.title">Party</b></p>
+                <div id="party_0" class="party_0_blank"></div>
+                <div id="party_1" class="party_1"></div>
+                <div id="party_2" class="party_2_blank"></div>
+                <div id="party_3" class="party_3_blank"></div>
+                <p id="rate_party_text" data-i18n="personality.rate.tobacco.lvl1">friend's place</p>
+                <input id="rate_party_value" name="rate_party" title="rate party" type="hidden" value="1" data-bind="user.personality.rate.party" />
+            <!-- end rate_party --></div>
+            <div id="rate_alcohol">
+            	<p><b data-i18n="personality.rate.alcohol.title">Alcohol</b></p>
+            	<div id="alcohol_0" class="alcohol_0_blank"></div>
+                <div id="alcohol_1" class="alcohol_1"></div>
+                <div id="alcohol_2" class="alcohol_2_blank"></div>
+                <div id="alcohol_3" class="alcohol_3_blank"></div>
+                <p id="rate_alcohol_text" data-i18n="personality.rate.alcohol.lvl1">from time to time</p>
+                <input id="rate_alcohol_value" name="rate_alcohol" title="rate alcohol" type="hidden" value="1" data-bind="user.personality.rate.alcohol" />
+            <!-- end rate_alcohol --></div>
+            <div id="rate_tobacco">
+            	<p><b data-i18n="personality.rate.tobacco.title">tobacco</b></p>
+            	<div id="tobacco_0" class="tobacco_0_blank"></div>
+                <div id="tobacco_1" class="tobacco_1"></div>
+                <div id="tobacco_2" class="tobacco_2_blank"></div>
+                <div id="tobacco_3" class="tobacco_3_blank"></div>
+                <div id="tobacco_4" class="tobacco_4_blank"></div>
+                <p id="rate_tobacco_text" data-i18n="personality.rate.tobacco.lvl1">tolerate the smoke</p>
+                <input id="rate_tobacco_value" name="rate_tobacco" title="rate tobacco" type="hidden" value="1" data-bind="user.personality.rate.tobacco" />
+            <!-- end rate_tobacco --></div>
+            <div id="driving_license">
+            	<p><b data-i18n="personality.driving_license.title">Driving License</b></p>
+                <div id="driving_license_car" class="driving_license_car_blank"></div>
+                <div id="driving_license_motorcycle" class="driving_license_motorcycle_blank"></div>
+                <p id="driving_license_text" data-i18n="personality.driving_license.none">none</p>
+                <input id="driving_license_value" name="driving_license" title="driving license" type="hidden" value="0" data-bind="user.profile.license" />
+          <!-- end driving_license --></div>
+					<div id="live_with">
+							<p><b data-i18n="personality.live_with.title">Live with</b></p>
+							<div id="live_w_parents" class="live_w_parents_blank"></div>
+							<div id="live_w_mates" class="live_w_mates_blank"></div>
+							<div id="live_alone" class="live_alone_woman"></div>
+							<p id="live_with_text" data-i18n="personality.live_with.alone">live alone</p>
+							<input id="live_with_value" name="live_with" title="live with" type="hidden" value="2" data-bind="user.profile.live_with" />
+					<!-- end live_with --></div>
+        <!-- end tab_personality --></div>
+        <div id="tab_physique">
+        	<div id="genderBox">
+          	<b data-i18n="physique.gender.title">Gender</b>
+  					<div id="woman" class="sign_woman"></div>
+            <div id="man" class="sign_man_blank"></div>
+						<div style="clear:both;"></div>
+            <div id="woman_text" style="cursor:pointer;" data-i18n="physique.gender.woman">woman</div>
+            <p id="man_text" style="cursor:pointer;" data-i18n="physique.gender.man">man</p>
+ 						<div style="clear:both;"></div>
+          <input id="gender" sty type="hidden" name="gender" value="woman" data-bind="user.profile.gender" />
+        <!-- end genderBox --></div>
+             <div id="haircut">
+             	<b data-i18n="physique.rate.haircut.title">Haircut</b>
+                <div id="rate_haircut">
+                    <div id="haircut_1" class="haircut_1"></div>
+                    <div id="haircut_2" class="haircut_2"></div>
+                    <div id="haircut_3" class="haircut_3"></div>
+                    <div id="haircut_4" class="haircut_4"></div>
+                <!-- end rate_haircut --></div>
+                <input id="rate_haircut_value" name="rate_haircut" title="rate haircut" type="hidden" value="4" data-bind="user.physique.size.hair" />
+                <p id="rate_haircut_text">long</p>
+			 <!-- end haircut --></div>
+             <div id="color_hair">
+             <b data-i18n="physique.color.body.hair">Color Hair</b>
+             <div class="dropdown_menu">
+             	<ul>
+                	<li class="color_black" data-i18n="physique.color.black">Black</li>
+                    <li class="color_black" data-color="black" data-i18n="physique.color.black">Black</li>
+                    <li class="color_blond" data-color="blond" data-i18n="physique.color.blond">Blond</li>
+                    <li class="color_brown" data-color="brown" data-i18n="physique.color.brown">Brown</li>
+                    <li class="color_grey" data-color="grey" data-i18n="physique.color.grey">Grey</li>
+                    <li class="color_whiteh" data-color="whiteh" data-i18n="physique.color.white">White</li>
+                    <li class="color_ginger" data-color="ginger" data-i18n="physique.color.ginger">Ginger</li>
+               </ul>
+               <input id="color_hair_value" type="hidden" name="hair_color" value="black" data-bind="user.physique.color.hair" />
+               <!-- end .dropdown_menu --></div>
+            <!-- end color_hair --></div>
+            <div style="clear:both;"></div>
+            <div id="color_eyes">
+            	<b data-i18n="physique.color.body.eyes">Eyes color</b>
+             	<div class="dropdown_menu">
+                    <ul>
+                        <li class="color_brown" data-i18n="physique.color.brown">Brown</li>
+                        <li class="color_blue" data-color="blue" data-i18n="physique.color.blue">Blue</li>
+                        <li class="color_brown" data-color="brown" data-i18n="physique.color.brown">Brown</li>
+                        <li class="color_green" data-color="green" data-i18n="physique.color.green">Green</li>
+                   </ul>
+               <input id="color_eyes_value" type="hidden" name="eyes_color" value="blue" data-bind="user.physique.color.eyes" />
+            	<!-- end .dropdown_menu --></div>
+             <!-- end color_eyes --></div>
+             <div id="color_skin">
+             	 <b data-i18n="physique.appearance.title">Appearance</b>
+                 <div class="dropdown_menu" style="width:190px;">
+                    <ul style="width:190px;">
+                        <li class="color_white" data-i18n="physique.appearance.caucasian">Caucasian</li>
+                        <li class="color_white" data-color="white" data-i18n="physique.appearance.caucasian">Caucasian</li>
+                        <li class="color_brown" data-color="brown" data-i18n="physique.appearance.mediterranean">Mediterranean</li>
+                        <li class="color_yellow" data-color="yellow" data-i18n="physique.appearance.asian">Asian</li>
+                        <li class="color_black" data-color="black" data-i18n="physique.appearance.african">African</li>
+                   </ul>
+                   <input id="color_skin_value" type="hidden" name="skin_color" value="white" data-bind="user.physique.color.skin" />
+                <!-- end .dropdown_menu --></div>
+            <!-- end color_skin --></div>
+            <div style="clear:both;"></div>
+            <div id="silhouette_wrapper">
+            <div id="height_wrapper">
+            	<input id="height" name="height" placeholder="Height" title="Height" type="text" data-bind="user.physique.size.height" autocomplete="off" type="number" step="0.1"  step="any" min="1.1" max="2.2" pattern="[0-9]*" data-i18n="[placeholder]physique.height"/><span data-i18n="m">m</span>
+            </div>
+            <div id="weight_wrapper">
+            	<input id="weight" name="weight" placeholder="Weight" title="Weight" type="text" data-bind="user.physique.size.weight" autocomplete="off" type="number" step="1" min="35" max="105" pattern="[0-9]*" data-i18n="[placeholder]physique.weight" /><span data-i18n="kg">kg</span>
+            </div>
+            <div id="silhouette">
+                <div id="silhouette_img" class="silhouette_woman"></div>
+                <div id="slider_height"></div>
+                <div id="slider_weight"></div>
+            <!-- end silhouette --></div>
+            <div style="clear:both;"></div>
+            </div>
+            <div id="rate_piercing">
+            	<p><b data-i18n="physique.rate.piercing.title">Piercing</b></p>
+                <div id="piercing_0" class="piercing_0"></div>
+                <div id="piercing_1" class="piercing_1_blank"></div>
+                <div id="piercing_2" class="piercing_2_blank"></div>
+                <div id="piercing_3" class="piercing_3_blank"></div>
+                <p id="rate_piercing_text" data-i18n="physique.rate.piercing.lvl0">none</p>
+                <input id="rate_piercing_value" name="rate_piercing" title="rate piercing" type="hidden" value="0" data-bind="user.physique.rate.piercing" />
+          <!-- end rate_piercing --></div>
+      		<div id="rate_piercing">
+            	<p><b data-i18n="physique.rate.tatoo.title">Tatoo</b></p>
+                <div id="tatoo_0" class="tatoo_0"></div>
+                <div id="tatoo_1" class="tatoo_1_blank"></div>
+                <div id="tatoo_2" class="tatoo_2_blank"></div>
+                <div id="tatoo_3" class="tatoo_3_blank"></div>
+                <p id="rate_tatoo_text" data-i18n="physique.rate.tatoo.lvl0">none</p>
+                <input id="rate_tatoo_value" name="rate_tatoo" title="rate tatoo" type="hidden" value="0" data-bind="user.physique.rate.tatoo" />
+          <!-- end rate_tatoo --></div>
+        <!-- end tab_physique --></div>
+        <div style="clear:both;"></div>
+        </div>
+    </form>
+  <!-- end .content --></div>
+  <div class="footer">
+    <p>Copyright & co</p>
+  <!-- end .footer --></div>
+  <div id="menu" class="menu">
+  
+  	<div class="ico_cancel menu_edit_child">
+    	<a href="profile.html" title="Cancel"><span class="spanlinks"></span></a>
+    <!-- end ico_cancel --></div>
+    
+    <div class="ico_save menu_edit_child">
+    	<a href="#" title="Save" data-i18n="general.submit">Save</a><a href="#" title="Register"><span class="spanlinks"></span></a>
+    <!-- end ico_save --></div>
+    
+  	<div id="ico_home" class="menu_child" data-i18n="general.title">Edit</div>
+  
+  <!-- end menu --></div>
+<!-- end .container --></div>
+<script src="js/jquery.js"></script>
+<script src="js/i18next.js"></script>
+<script src="js/user.class.js"></script>
+<script src="js/communication.class.js"></script>
+<script src="js/lang.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/jquery-ui.touch-punch.js"></script>
+<script src="js/preload.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/portrait_maker.js"></script>
+<script src="js/sign_switcher.js"></script>
+<script src="js/rates.js"></script>
+<script src="js/silhouette_sliders.js"></script>
+<script src="js/user.class.js"></script>
+<script src="js/doubleico_switcher.js"></script>
+<script src="js/bindings.js"></script>
+<script src="js/page.profile_edit.js"></script>
+</body>
+</html>

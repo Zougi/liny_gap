@@ -1,0 +1,149 @@
+/* portrait chat style sheet */
+
+
+#chat_msgs_portrait {
+	width: 96%;
+	margin-left: 3%;
+	margin-bottom: 130px;
+        display:    block;
+}
+
+.chat_msg_landscape{
+    display: none;
+}
+
+.msg {
+	/*width: 97%;*/
+	width: 276px;
+	height: 39px;
+	position: relative;
+	margin-left: 30%;
+	margin-top: 15px;
+}
+
+.msg_other {
+	margin-left: 1.5%;
+}
+
+.msg_top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 276px;
+	height: 15px;
+	background-image: url(../images/contacts/chatbox_top_grey.png);
+}
+
+.msg_top_other {
+	background-image: url(../images/contacts/chatbox_top_red.png);
+}
+
+.msg_middle {
+	position: absolute;
+	background-image: url(../images/contacts/chatbox_background_grey.png);
+	background-repeat: repeat-y;
+	width: 276px;
+	height: 0;
+	top: 15px;
+	left: 0;
+}
+
+.msg_middle_other {
+	background-image: url(../images/contacts/chatbox_background_red.png);
+}
+
+.msg_bottom {
+	position: absolute;
+	background-image: url(../images/contacts/chatbox_bottom_grey.png);
+	width: 276px;
+	height: 24px;
+	bottom: 0;
+	left: 0;
+}
+
+.msg_bottom_other {
+	background-image: url(../images/contacts/chatbox_bottom_red.png);
+}
+
+.chat_text {
+	position: absolute;
+	display: block;
+	width: 234px;
+	height: 100%;
+	overflow: auto;
+	line-height: 20px;
+	margin-left: 3px;
+	margin-top: 8px;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+
+.msg_glossy {
+	position: absolute;
+	background-image: url(../images/contacts/chatbox_glossy.png);
+	background-size: 258px 16px;
+	background-repeat: no-repeat;
+	width: 258px;
+	height: 16px;
+	z-index: 3;
+	margin-left: 4px;
+	margin-top: 5px;
+}
+
+.msg_glossy_other {
+	margin-left: 14px;
+}
+
+.msg_date {
+	position: absolute;
+	margin-left: 200px;
+	background-color: #B9B9B9;
+	font-size: 9pt;
+	line-height: 10px;
+}
+
+.msg_date_other {
+	margin-left: 35px;
+	background-color: #DCACB5;
+}
+
+#chat_entry_portrait button {
+	margin-top: 12px;
+	position: relative;
+	float: left;
+	display: inline-block;
+	background-image: url(../images/forms/background_button_subscribe.png);
+	background-repeat: repeat-x;
+	background-size: contain;
+	cursor: pointer;
+	height: 40px;
+	width: 80px;
+	text-align: center;
+	color: #FFFFFF;
+	text-decoration: none;
+	border-radius: 5px;
+	line-height: 28px;
+	font-size: 12pt;
+	margin-left: 6.25%;
+}
+
+#chat_entry_portrait textarea {
+	float: left;
+	margin-left: 4%;
+	margin-top: 5px;
+	height: 50px;
+	max-height: 50px;
+	width: 63%;
+	max-width: 63%;
+	resize: none;
+	background-color: #FFF;
+}
+
+#chat_entry_portrait {
+	background-color: rgba(50,50,50,0.25);
+	position: fixed;
+	bottom: 47px;
+	width: 100%;
+	z-index: 3;
+    display:block;
+}

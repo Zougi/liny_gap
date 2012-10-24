@@ -1,0 +1,218 @@
+/* landscape edit style sheet */
+
+#ico_home {
+	background-image: url(../images/menu/button_home_blank.png);
+	cursor: default;
+	color: #FFF;
+	padding-top: 18px;
+	font-size: 17px;
+	background-size: 100% 47px;
+	text-shadow: none;
+	font-weight: bold;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.menu_edit_child {
+	position: relative;
+	width: 86px;
+	min-height: 40px;
+	min-width: 40px;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	display: inline-block;
+	white-space: normal;
+	cursor: pointer;
+}
+
+.ico_cancel {
+	background-image: url(../images/forms/button_cancel.png);
+	margin-top: 47px;
+	margin-left: 4px;
+	width: 60px;
+	height: 38px;
+	background-repeat: no-repeat;
+	background-size: 60px 38px;
+	float: left;
+}
+
+.ico_cancel:hover {
+	background-image: url(../images/forms/button_cancel_glow.png);
+}
+
+.ico_save {
+	background-image: url(../images/forms/button_save.png);
+	background-position: right bottom;
+	float: right;
+	height: 48px;
+	width: 60px;
+	line-height: 25px;
+	margin-right: 5px;;
+	margin-left: 0;
+	margin-top: 45px;
+}
+
+.ico_save:hover {
+	background-image: url(../images/forms/button_save_glow.png);
+	
+}
+
+.ico_save a {
+	color: #FFF;
+	text-decoration:none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.ico_save:hover a {
+	outline: none;
+	border-color: #900;
+	text-shadow: 0px 0px 5px #FFF;
+}
+
+
+.dropdown_menu {
+   width: 130px;
+   height: 33px;
+   border: 2px solid #666666;
+   border-radius: 5px;
+   background: url(../images/forms/button_select.png) no-repeat right #FFF;
+}
+
+.dropdown_menu:hover {
+	background: url(../images/forms/button_select_glow.png) no-repeat right #FFF;
+}
+
+.dropdown_menu ul {
+	position: absolute;
+	width: 130px;
+	line-height: 33px;
+	cursor: pointer;
+	list-style: none;
+}
+
+.dropdown_menu li:first-child {
+	border: none;
+	display: inline;
+	line-height: 35px;
+}
+
+.dropdown_menu li:first-child:hover {
+	background-color: transparent;
+	color: #000;
+}
+
+.dropdown_menu li:not(:first-child) {
+	z-index:3 !important;
+	position: relative;
+}
+
+.dropdown_menu li {
+	border-top: none;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+	border-bottom: 2px solid #000;
+	padding-left: 12px;
+	display: none;
+	text-transform:capitalize;
+	background-color: #FFF;
+}
+
+.dropdown_menu li:hover {
+	background-color: #AC1D23;
+	color: #FFF;
+}
+
+.fakeInput {
+	border: 2px solid #666666;
+	background-color:  rgba(255, 255, 255, 0.7);
+	border-radius: 5px;
+	min-height: 30px;
+	min-width: 300px;
+}
+
+.fakeInput_focus {
+	outline: none;
+	border-color: #900;
+	-webkit-box-shadow: 0px 0px 3pt 2pt #900;
+	-moz-box-shadow: 0px 0px 3pt 2pt #900;
+	box-shadow: 0px 0px 3pt 2pt #900;
+	background-color: #FFF;
+}
+
+.fakeInput_elem {
+	position: relative;
+	margin-left: 5px;
+	margin-bottom: 10px;
+	top: 5px;
+	padding: 0 2px;
+	border: 2px solid #900;
+	background-color: #933;
+	color: #FFF;
+	font-size: 11pt;
+	font-style: normal;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+.fakeInput_remove {
+	margin-left: 5px;
+	color: #FFF;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.fakeInput_remove_hover {
+	-webkit-text-shadow: text-shadow: 0px 0px 5px #FFF;
+	-moz-text-shadow: text-shadow: 0px 0px 5px #FFF;
+	text-shadow: text-shadow: 0px 0px 5px #FFF;
+}
+
+#sports, #musics, #movies, #books, #hobbies, #studies, #job, #spoken_lang {
+	border: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	background: none;
+	width: 100%;
+}
+
+label {
+	font-weight: bold;
+}
+
+.party_0, .party_0_blank, .party_1, .party_1_blank, .party_2, .party_2_blank, .party_3, .party_3_blank {
+	cursor: pointer;
+}
+
+.alcohol_0, .alcohol_0_blank, .alcohol_1, .alcohol_1_blank, .alcohol_2, .alcohol_2_blank, .alcohol_3, .alcohol_3_blank {
+	cursor: pointer;	
+}
+
+.tobacco_0, .tobacco_0_blank, .tobacco_1, .tobacco_1_blank, .tobacco_2, .tobacco_2_blank, .tobacco_3, .tobacco_3_blank, .tobacco_4, .tobacco_4_blank {
+	cursor: pointer;	
+}
+
+.piercing_0, .piercing_0_blank, .piercing_1, .piercing_1_blank, .piercing_2, .piercing_2_blank, .piercing_3, .piercing_3_blank {
+	cursor: pointer;
+}
+
+.tatoo_0, .tatoo_0_blank, .tatoo_1, .tatoo_1_blank, .tatoo_2, .tatoo_2_blank, .tatoo_3, .tatoo_3_blank {
+	cursor: pointer;
+}
+
+.driving_license_none, .driving_license_none_blank, .driving_license_car, .driving_license_car_blank, .driving_license_motorcycle, .driving_license_motorcycle_blank {
+	cursor: pointer;
+}
+
+.live_w_parents_blank, .live_w_mates_blank, .live_alone_blank, .live_w_parents_woman, .live_w_mates_woman, .live_alone_woman, .live_w_parents_man, .live_w_mates_man, .live_alone_man {
+	cursor: pointer;
+}

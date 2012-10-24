@@ -1,0 +1,15 @@
+{
+    "search": "Search",
+    "contacts": "Contacts",
+    "filters": "Filters",
+    "profile": "Profile",
+    "history": "History",
+    "settings": "Settings",
+    "login": {
+        "email": "E-mail",
+        "password": "Password",
+        "submit": "Connect"
+    },
+		"subscribe": "Subscribe",
+   "contacts_online": "Contacts Online"
+}

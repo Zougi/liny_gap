@@ -1,0 +1,85 @@
+/* portrait subscribe style sheet */
+
+@import url(../sign_switcher.css);
+
+#connection_frame {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	width: 85%;
+	margin: 0 5%;
+	height: 60px;
+}
+
+#password {	
+	float: left;
+	margin-left: 3%;
+}
+
+#email {
+	float: left;
+}
+
+#profile_frame {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	width: 85%;
+	margin: 0 5%;
+	height: 200px;
+}
+
+#firstname {
+	float: left;	
+}
+
+#lastname {
+	float: left;
+	margin-left: 3%;
+}
+
+#genderBox {
+	position: relative;
+	float: left;
+	width: 140px;
+	text-align: center;
+}
+
+#woman {
+	position: relative;
+	float: left;
+	width: 45px;
+	height: 90px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	cursor: pointer;
+}
+
+#man {
+	position: relative;
+	float: right;
+	width: 64px;
+	height: 90px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	cursor: pointer;
+}
+
+#birthdate {
+	margin-top: 40px;
+	margin-left: 7%;
+	position: relative;
+	float: left;
+	background-image: url(../images/forms/button_calendar.png);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.check {
+	margin-top: 8px;
+	margin-left: 0px;
+}
+
+.check:last-child {
+	margin-top: 45px;
+}

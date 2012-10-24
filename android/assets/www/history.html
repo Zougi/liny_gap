@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Liny - History</title>
+<!-- general css -->
+<link href="css/blitzer/jquery-ui.css" type="text/css" rel="stylesheet" />
+<link href="css/app/landscape.css" rel="stylesheet" type="text/css" />
+<link href="css/app/portrait.css" rel="stylesheet" type="text/css" media="only screen and (max-width:720px)" />
+<!-- page css -->
+<link href="css/app/landscape/home.css" rel="stylesheet" type="text/css" />
+<link href="css/app/portrait/home.css" rel="stylesheet" type="text/css" media="only screen and (max-width:720px)" />
+<script charset="utf-8" src="js/cordova.js"></script>
+</head>
+<body>
+<div class="container">
+	<div id='fb-banner'>Nous avons besoin de vous, <a style="color: #98d3f4; margin-right: 10px;" href="mailto:feedback@liny.info">donnez-nous vos impressions!</a></div>
+	<div id="menu_landscape" class="menu_landscape">
+      <div class="ico_search menu_landscape_child">
+        <a href="index.html" title="Search"><span class="spanlinks"></span></a>
+        <a href="index.html" class="menuLinks" data-i18n="ns.menu:search">Search</a>
+      <!-- end ico_search --></div>
+      
+      <div class="ico_contacts menu_landscape_child">
+        <a href="contacts.html" title="Contacts"><span class="spanlinks"></span></a>
+        <a href="contacts.html" class="menuLinks" data-i18n="ns.menu:contacts">Contacts</a>
+      <!-- end ico_contacts --></div>
+      
+      <div class="ico_filters menu_landscape_child">
+        <a href="filters.html" title="Filters"><span class="spanlinks"></span></a>
+        <a href="filters.html" class="menuLinks" data-i18n="ns.menu:filters">Filters</a>
+      <!-- end ico_filters --></div>
+      
+      
+      <div class="ico_profile menu_landscape_child">
+        <a href="profile.html" title="Profile"><span class="spanlinks"></span></a>
+        <a href="profile.html" class="menuLinks" data-i18n="ns.menu:profile">Profile</a>
+      <!-- end ico_profile --></div>
+      
+      <div class="ico_history menu_landscape_child">
+        <a href="history.html" title="History"><span class="spanlinks"></span></a>
+        <a href="history.html" class="menuLinks" data-i18n="ns.menu:history">History</a>
+      <!-- end ico_history --></div>
+     
+      <div class="ico_settings menu_landscape_child">
+        <a href="settings.html" title="Settings"><span class="spanlinks"></span></a>
+        <a href="settings.html" class="menuLinks" data-i18n="ns.menu:settings">Settings</a>
+      <!-- end ico_settings --></div>
+      
+      <div class="ico_faq 	 menu_landscape_child">
+        <a href="faq.html" title="faq"><span class="spanlinks"></span></a>
+        <a href="faq.html" class="menuLinks" data-i18n="ns.menu:faq">FAQ</a>
+      <!-- end ico_faq --></div>
+  <!-- end menu_landscape --></div>
+	
+ <div id="menu_top">
+  	<p>Liny</p><!--<img id="logo" src="css/app/images/logo.png" />-->
+    <form id="connectform_top" method="post">
+        <input id="top_email" name="email" title="Email" placeholder="Email" type="text" data-i18n="[placeholder]ns.menu:login.email" />
+        <input id="top_password" name="password" title="Password" placeholder="Password" type="password" data-i18n="[placeholder]ns.menu:login.password" />
+        <button id="top_connect" class="connect reverse" type="submit"><p data-i18n="ns.menu:login.submit">Connect</p></button>
+    </form>
+		<div id="div_ads"></div>
+		<button id="top_subscribe" class="subscribe reverse" type="submit"><p data-i18n="ns.menu:subscribe">Subscribe</p></button>
+		<a id="top_logout" href="?logout=true">logout</a>
+    <div id="lang">
+    	<ul>
+        	<li>en</li>
+          <li data-lang="en">en</li>
+          <li data-lang="fr">fr</li>
+      </ul>
+    <!-- end lang --></div>
+    <div id="chat_open" data-i18n="ns.menu:contacts_online">
+			Contacts Online
+    </div>
+    <div id="chat_bar">
+    	<div id="chat_bar_contacts"></div>
+        <div id="chat_bar_msgs"></div>
+    	<input type="text" />
+    </div>
+  <!-- end menu_top --></div>
+  <!--<form>
+  		<input id="search" type="text" title="Search" name="search" data-i18n="[title]searchbar.title" />
+    </form>
+  <div id="searchbar_button"><input type="checkbox" name="rememberme" value="true" /><i data-i18n="searchbar.rememberme">remember me</i></div>-->
+  
+  <div class="content">
+  <!-- faire onglet Dernieres notifications, rencontres, Dernières conversations -->
+        <h2>Historique</h2><br />
+        <p>
+        	<b>5:06</b> <font color="#FF33FF">kikoo45</font> veut vous rencontrer<br /><br />
+        	<b>19.janv</b> <font color="#0066FF">jeunFille</font> : j’ai envi de te voir<br /><br />
+            <b>17.janv</b> <font color="#FF33FF">La5</font> : je suis à Paris
+        </p>
+  <!-- end .content --></div>
+  <div class="footer">
+    <p>Copyright & co</p>
+  <!-- end .footer --></div>
+  
+  <div id="menu" class="menu">
+
+      <div class="ico_search menu_child">
+        <a href="index.html" title="Search"><span class="spanlinks"></span></a>
+        <a href="index.html" class="menuLinks" data-i18n="ns.menu:search">Search</a>
+      <!-- end ico_search --></div>
+      
+      <div class="ico_contacts menu_child">
+        <a href="contacts.html" title="Contacts"><span class="spanlinks"></span></a>
+        <a href="contacts.html" class="menuLinks" data-i18n="ns.menu:contacts">Contacts</a>
+      <!-- end ico_contacts --></div>
+      
+      <div id="ico_home" class="ico_home menu_child"></div>
+      
+      <div class="ico_filters menu_child">
+        <a href="filters.html" title="Filters"><span class="spanlinks"></span></a>
+        <a href="filters.html" class="menuLinks" data-i18n="ns.menu:filters">Filters</a>
+      <!-- end ico_filters --></div>
+      
+      
+      <div class="ico_profile menu_child">
+        <a href="profile.html" title="Profile"><span class="spanlinks"></span></a>
+        <a href="profile.html" class="menuLinks" data-i18n="ns.menu:profile">Profile</a>
+      <!-- end ico_profile --></div>
+      
+      <div class="ico_history menu_child">
+        <a href="history.html" title="History"><span class="spanlinks"></span></a>
+        <a href="history.html" class="menuLinks" data-i18n="ns.menu:history">History</a>
+      <!-- end ico_history --></div>
+     
+      <div class="ico_settings menu_child">
+        <a href="settings.html" title="Settings"><span class="spanlinks"></span></a>
+        <a href="settings.html" class="menuLinks" data-i18n="ns.menu:settings">Settings</a>
+      <!-- end ico_settings --></div>
+      
+      <div class="ico_faq menu_child">
+        <a href="faq.html" title="faq"><span class="spanlinks"></span></a>
+        <a href="faq.html" class="menuLinks" data-i18n="ns.menu:faq">FAQ</a>
+      <!-- end ico_settings --></div>
+  
+  	  <div id="menu_page" class="menu_page_container">
+  		<div class="content">
+        	<div id="button_search">
+  				<a href="#index"><div class="menu_page_icons"></div></a><a href="#index" class="menu_page_text" data-i18n="ns.menu:search">Search</a>
+            <!-- end button_search --></div>
+            <div id="button_contacts">
+  				<a href="#contacts"><div class="menu_page_icons"></div></a><a href="#contacts" class="menu_page_text" data-i18n="ns.menu:contacts">Contacts</a>
+            <!-- end button_contacts --></div>
+  			<br />
+            
+            <div id="button_filters">
+  				<a href="#filters"><div class="menu_page_icons"></div></a><a href="#filters" class="menu_page_text" data-i18n="ns.menu:filters">Filters</a>
+            <!-- end button_filters --></div>
+            <div id="button_profile">
+  				<a href="#profile"><div class="menu_page_icons"></div></a><a href="#" class="menu_page_text" data-i18n="ns.menu:profile">Profile</a>
+            <!-- end button_profile --></div>
+            <br />
+            
+             <div id="button_history">
+  				<a href="#history"><div class="menu_page_icons"></div></a><a href="#history" class="menu_page_text" data-i18n="ns.menu:history">History</a>
+            <!-- end button_history --></div>
+            <div id="button_settings">
+  				<a href="#settings"><div class="menu_page_icons"></div></a><a href="#settings" class="menu_page_text" data-i18n="ns.menu:settings">Settings</a>
+            <!-- end button_settings --></div>
+  		<!-- end content --></div>
+  	  <!-- end menu_page --></div>
+  <!-- end menu --></div>
+  
+<!-- end .container --></div>
+<!-- general scripts -->
+<script src="js/jquery.js"></script>
+<script src="js/i18next.js"></script>
+<script src="js/lang.js"></script>
+<!-- general scripts -->
+<script src="js/jquery-ui.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/preload.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/konami.js"></script>
+<!-- page scripts -->
+<script src="js/page.history.js"></script>
+</body>
+</html>

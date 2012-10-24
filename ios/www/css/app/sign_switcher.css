@@ -1,0 +1,17 @@
+/* signs woman/man style sheet */
+
+.sign_man {
+	background-image: url(images/profile/man/sign.png);
+}
+
+.sign_man_blank {
+	background-image: url(images/profile/man/sign_blank.png);
+}
+
+.sign_woman {
+	background-image: url(images/profile/woman/sign.png);
+}
+
+.sign_woman_blank {
+	background-image: url(images/profile/woman/sign_blank.png);
+}

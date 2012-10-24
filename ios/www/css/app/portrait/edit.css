@@ -1,0 +1,143 @@
+/* portrait edit style sheet */
+
+#ico_home {
+	background-image: url(../images/menu/button_home_blank.png);
+	cursor: default;
+	color: #FFF;
+	padding-top: 18px;
+	font-size: 17px;
+	background-size: 100% 47px;
+	text-shadow: none;
+	font-weight: bold;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.menu_edit_child {
+	position: relative;
+	width: 86px;
+	min-height: 40px;
+	min-width: 40px;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	display: inline-block;
+	white-space: normal;
+	cursor: pointer;
+}
+
+.ico_cancel {
+	background-image: url(../images/forms/button_cancel.png);
+	margin-top: 7px;
+	margin-left: 4px;
+	float: left;
+	width: 86px;
+	height: 34px;
+	background-size: contain;
+}
+
+.ico_cancel:hover, .ico_cancel_glow {
+	background-image: url(../images/forms/button_cancel_glow.png);
+}
+
+.ico_save {
+	background-image: url(../images/forms/button_save.png);
+	background-position: right bottom;
+	float: right;
+	height: 48px;
+	width: 80px;;
+	line-height: 25px;
+	margin-right: 15px;
+	margin-left: -15px;
+	margin-top: 0;
+}
+
+.ico_save:hover, .ico_save_glow {
+	background-image: url(../images/forms/button_save_glow.png);
+	
+}
+
+.ico_save a {
+	color: #FFF;
+	text-decoration:none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.ico_save:hover a {
+	outline: none;
+	border-color: #900;
+	text-shadow: 0px 0px 5px #FFF;
+}
+
+
+.dropdown_menu {
+   width: 130px;
+   height: 33px;
+   border: 2px solid #666666;
+   border-radius: 5px;
+   background: url(../images/forms/button_select.png) no-repeat right #FFF;
+}
+
+.dropdown_menu:hover {
+	background: url(../images/forms/button_select_glow.png) no-repeat right #FFF;
+}
+
+.dropdown_menu ul {
+	position: absolute;
+	width: 130px;
+	line-height: 33px;
+	cursor: pointer;
+	list-style: none;
+	z-index: 2;
+}
+
+.dropdown_menu li:first-child {
+	border: none;
+	display: inline;
+	line-height: 35px;
+}
+
+.dropdown_menu li:first-child:hover {
+	background-color: transparent;
+	color: #000;
+}
+
+.dropdown_menu li {
+	border-top:none;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+	border-bottom: 2px solid #000;
+	padding-left: 12px;
+	display: none;
+	text-transform:capitalize;
+	background-color: #FFF;
+}
+
+.dropdown_menu li:hover {
+	background-color: #AC1D23;
+	color: #FFF;
+}
+
+input[type="text"], input[type="password"], .fakeInput {
+	border: 2px solid #666666;
+	background-color:  rgba(255, 255, 255, 0.7);
+	border-radius: 5px;
+	min-height: 30px;
+	width: 40%;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+	outline: none;
+	border-color: #900;
+	-webkit-box-shadow: 0px 0px 3pt 2pt #900;
+	-moz-box-shadow: 0px 0px 3pt 2pt #900;
+	box-shadow: 0px 0px 3pt 2pt #900;
+}

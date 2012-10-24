@@ -1,0 +1,15 @@
+{
+    "title": "titre",
+    "location": {
+        "share": "Share my location",
+        "save": "Save a fair amount of location record to find accurate results"
+    },
+    "notifications": {
+        "match": "Get love match notifications",
+        "all": "Receve all notifications"
+    },
+    "search_perimeter": "Define search perimeter",
+    "display_friends": "Display friends on the map",
+    "disable_landscape": "Disable landscape view",
+    "min_match": "Minimum match percentage"
+}

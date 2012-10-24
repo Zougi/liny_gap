@@ -1,0 +1,28 @@
+{
+    "downloadit": "Télécharge Liny sur ton Smartphone. Partage ta position pour avoir de meilleurs résultats",
+	"searchbar": {
+		"title": "Rechercher",
+        "rememberme": "rester connecté"
+	},
+    "subscribe": {
+        "title": "S'inscrire",
+        "email": "Mail",
+        "password": "Mot de passe",
+        "firstname": "Prénom",
+        "lastname": "Nom",
+        "birthdate": "Date de naissance",
+        "gender": {
+            "title": "Genre",
+            "woman": "Femme",
+            "man": "Homme"
+        },
+        "or_openid": "Ou...",
+        "openid": "Openid",
+        "submit": "S'inscrire",
+        "legend": {
+            "connection": "Connexion",
+            "profile": "profil"
+        }
+    },
+		"msg_share_location": "Pour afficher la map, autorise ton navigateur à partager ta position"
+}

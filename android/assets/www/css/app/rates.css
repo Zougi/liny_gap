@@ -1,0 +1,345 @@
+/* rates style sheet */
+
+.party_0, .party_0_blank, .party_1, .party_1_blank, .party_2, .party_2_blank, .party_3, .party_3_blank {
+	position: relative;
+	background-position:bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	white-space: normal;
+	border: 0;
+}
+
+.alcohol_0, .alcohol_0_blank, .alcohol_1, .alcohol_1_blank, .alcohol_2, .alcohol_2_blank, .alcohol_3, .alcohol_3_blank {
+	position: relative;
+	background-position:bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	white-space: normal;
+	border: 0;
+	padding-right: 8px;
+}
+
+.tobacco_0, .tobacco_0_blank, .tobacco_1, .tobacco_1_blank, .tobacco_2, .tobacco_2_blank, .tobacco_3, .tobacco_3_blank, .tobacco_4, .tobacco_4_blank {
+	position: relative;
+	background-position:bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	white-space: normal;
+	border: 0;
+	padding-right: 15px;
+}
+
+.tobacco_1, .tobacco_1_blank {
+	margin-left: 5px !important;
+}
+
+.piercing_0, .piercing_0_blank, .piercing_1, .piercing_1_blank, .piercing_2, .piercing_2_blank, .piercing_3, .piercing_3_blank {
+	position: relative;
+	background-position:bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	white-space: normal;
+	border: 0;
+}
+
+.tatoo_0, .tatoo_0_blank, .tatoo_1, .tatoo_1_blank, .tatoo_2, .tatoo_2_blank, .tatoo_3, .tatoo_3_blank {
+	position: relative;
+	background-position:bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	white-space: normal;
+	border: 0;
+}
+
+.party_0 {
+	background-image: url(images/profile/screen/rate_party_none.png);
+	width: 30px;
+	height: 30px;
+}
+
+
+.party_0_blank {
+	background-image: url(images/profile/screen/rate_party_none_blank.png);
+	width: 30px;
+	height: 30px;
+}
+
+.party_1 {
+	background-image: url(images/profile/screen/rate_party.png);
+	width: 30px;
+	height: 30px;
+}
+
+.party_1_blank {
+	background-image: url(images/profile/screen/rate_party_blank.png);
+	width: 30px;
+	height: 30px;
+}
+
+.party_2 {
+	background-image: url(images/profile/screen/rate_party.png);
+	width: 40px;
+	height: 40px;
+}
+
+.party_2_blank {
+	background-image: url(images/profile/screen/rate_party_blank.png);
+	width: 40px;
+	height: 40px;
+}
+
+.party_3 {
+	background-image: url(images/profile/screen/rate_party.png);
+	width: 50px;
+	height: 50px;
+}
+
+.party_3_blank {
+	background-image: url(images/profile/screen/rate_party_blank.png);
+	width: 50px;
+	height: 50px;
+}
+
+.alcohol_0 {
+	background-image: url(images/profile/screen/rate_alcohol_none.png);
+	width: 33px;
+	height: 45px;
+}
+
+.alcohol_0_blank {
+	background-image: url(images/profile/screen/rate_alcohol_none_blank.png);
+	width: 33px;
+	height: 45px;
+}
+
+.alcohol_1 {
+	background-image: url(images/profile/screen/rate_alcohol.png);
+	width: 23px;
+	height: 45px;
+}
+
+.alcohol_1_blank {
+	background-image: url(images/profile/screen/rate_alcohol_blank.png);
+	width: 23px;
+	height: 45px;
+}
+
+.alcohol_2 {
+	background-image: url(images/profile/screen/rate_alcohol.png);
+	width: 27px;
+	height: 52.83px;
+}
+
+.alcohol_2_blank {
+	background-image: url(images/profile/screen/rate_alcohol_blank.png);
+	width: 27px;
+	height: 52.83px;
+}
+
+.alcohol_3 {
+	background-image: url(images/profile/screen/rate_alcohol.png);
+	width: 32px;
+	height: 62.61px;
+}
+
+.alcohol_3_blank {
+	background-image: url(images/profile/screen/rate_alcohol_blank.png);
+	width: 32px;
+	height: 62.61px;
+}
+
+.tobacco_0 {
+	background-image: url(images/profile/screen/rate_tobacco_none.png);
+	background-size: 23px 30px;
+	width: 23px;
+	height: 30px;
+}
+
+.tobacco_0_blank {
+	background-image: url(images/profile/screen/rate_tobacco_none_blank.png);
+		background-size: 23px 30px;
+	width: 23px;
+	height: 30px;
+}
+
+.tobacco_1 {
+	background-image: url(images/profile/screen/rate_tobacco.png);
+	background-size: 7px 30px;
+	margin-left: 20px;
+	width: 7px;
+	height: 30px;
+}
+
+.tobacco_1_blank {
+	background-image: url(images/profile/screen/rate_tobacco_blank.png);
+	background-size: 7px 30px;
+	margin-left: 20px;
+	width: 7px;
+	height: 30px;
+}
+
+.tobacco_2 {
+	background-image: url(images/profile/screen/rate_tobacco.png);
+	background-size: 7px 40px;
+	width: 7px;
+	height: 40px;
+	margin-left: 7px;
+}
+
+.tobacco_2_blank {
+	background-image: url(images/profile/screen/rate_tobacco_blank.png);
+	background-size: 7px 40px;
+	width: 7px;
+	height: 40px;
+	margin-left: 7px;
+}
+
+.tobacco_3 {
+	background-image: url(images/profile/screen/rate_tobacco.png);
+	background-size: 7px 50px;
+	width: 7px;
+	height: 50px;
+	margin-left: 7px;
+}
+
+.tobacco_3_blank {
+	background-image: url(images/profile/screen/rate_tobacco_blank.png);
+	background-size: 7px 50px;
+	width: 7px;
+	height: 50px;
+	margin-left: 7px;
+}
+
+.tobacco_4 {
+	background-image: url(images/profile/screen/rate_tobacco.png);
+	background-size: 7px 60px;
+	width: 7px;
+	height: 60px;
+	margin-left: 7px;
+}
+
+.tobacco_4_blank {
+	background-image: url(images/profile/screen/rate_tobacco_blank.png);
+	background-size: 7px 60px;
+	width: 7px;
+	height: 60px;
+	margin-left: 7px;
+}
+
+.tatoo_0 {
+	background-image: url(images/profile/screen/rate_tatoo_none.png);
+	width: 28px;
+	height: 47.16px;
+	margin-left: 7px;
+}
+
+.tatoo_0_blank {
+	background-image: url(images/profile/screen/rate_tatoo_none_blank.png);
+	width: 28px;
+	height: 47.16px;
+	margin-left: 7px;
+}
+
+.tatoo_1 {
+	background-image: url(images/profile/screen/rate_tatoo.png);
+	width: 28px;
+	height: 47.16px;
+	margin-left: 20px;
+}
+
+.tatoo_1_blank {
+	background-image: url(images/profile/screen/rate_tatoo_blank.png);
+	width: 28px;
+	height: 47.16px;
+	margin-left: 20px;
+}
+
+.tatoo_2 {
+	background-image: url(images/profile/screen/rate_tatoo.png);
+	width: 33px;
+	height: 55.58px;
+	margin-left: 7px;
+}
+
+.tatoo_2_blank {
+	background-image: url(images/profile/screen/rate_tatoo_blank.png);
+	width: 33px;
+	height: 55.58px;
+	margin-left: 7px;
+}
+
+.tatoo_3 {
+	background-image: url(images/profile/screen/rate_tatoo.png);
+	width: 38px;
+	height: 64px;
+	margin-left: 7px;
+}
+
+.tatoo_3_blank {
+	background-image: url(images/profile/screen/rate_tatoo_blank.png);
+	width: 38px;
+	height: 64px;
+	margin-left: 7px;
+}
+
+.piercing_0 {
+	background-image: url(images/profile/screen/rate_piercing_none.png);
+	width: 23.682px;
+	height: 54.47px;
+	margin-left: 7px;
+}
+
+.piercing_0_blank {
+	background-image: url(images/profile/screen/rate_piercing_none_blank.png);
+	width: 23.682px;
+	height: 54.47px;
+	margin-left: 7px;
+}
+
+.piercing_1 {
+	background-image: url(images/profile/screen/rate_piercing.png);
+	width: 15px;
+	height: 54.47px;
+	margin-left: 20px;
+}
+
+.piercing_1_blank {
+	background-image: url(images/profile/screen/rate_piercing_blank.png);
+	width: 15px;
+	height: 54.47px;
+	margin-left: 20px;
+}
+
+.piercing_2 {
+	background-image: url(images/profile/screen/rate_piercing.png);
+	width: 17px;
+	height: 61.74px;
+	margin-left: 7px;
+}
+
+.piercing_2_blank {
+	background-image: url(images/profile/screen/rate_piercing_blank.png);
+	width: 17px;
+	height: 61.74px;
+	margin-left: 7px;
+}
+
+.piercing_3 {
+	background-image: url(images/profile/screen/rate_piercing.png);
+	width: 19px;
+	height: 69px;
+	margin-left: 7px;
+}
+
+.piercing_3_blank {
+	background-image: url(images/profile/screen/rate_piercing_blank.png);
+	width: 19px;
+	height: 69px;
+	margin-left: 7px;
+}
+

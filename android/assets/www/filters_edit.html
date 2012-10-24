@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Liny - Filters</title>
+
+<!-- corps css -->
+<link href="css/blitzer/jquery-ui.css" type="text/css" rel="stylesheet" />
+<link href="css/app/landscape.css" rel="stylesheet" type="text/css" />
+<link href="css/app/portrait.css" rel="stylesheet" type="text/css" media="only screen and (max-width:720px)" />
+<!-- filters_css -->
+<link href="css/app/looking_for.css" rel="stylesheet" type="text/css" />
+<link href="css/app/landscape/filters.css" rel="stylesheet" type="text/css" />
+<link href="css/app/portrait/filters.css" rel="stylesheet" type="text/css" media="only screen and (max-width:720px)" />
+<link href="css/app/landscape/edit.css" rel="stylesheet" type="text/css" />
+<link href="css/app/portrait/edit.css" rel="stylesheet" type="text/css" media="only screen and (max-width:720px)" />
+
+<script charset="utf-8" src="js/cordova.js"></script>
+</head>
+<body>
+<div class="container">
+	<div id='fb-banner'>Nous avons besoin de vous, <a style="color: #98d3f4; margin-right: 10px;" href="mailto:feedback@liny.info">donnez-nous vos impressions!</a></div>
+  <div id="menu_landscape" class="menu_landscape">
+       <div class="ico_cancel menu_landscape_child menu_edit_child">
+    	<a href="filters.html" title="Cancel"><span class="spanlinks"></span></a>
+    <!-- end ico_cancel --></div>
+    
+    <div class="ico_save menu_landscape_child menu_edit_child">
+    	<a id="save" href="#" title="Save" data-i18n="general.submit">Save</a><a href="#" title="Register"><span class="spanlinks"></span></a>
+    <!-- end ico_save --></div>
+  <!-- end menu_landscape --></div>
+ <div id="menu_top">
+  	<p>Liny</p><!--<img id="logo" src="css/app/images/logo.png" />-->
+    <form id="connectform_top" method="post">
+        <input id="top_email" name="email" title="Email" placeholder="Email" type="text" data-i18n="[placeholder]ns.menu:login.email" />
+        <input id="top_password" name="password" title="Password" placeholder="Password" type="password" data-i18n="[placeholder]ns.menu:login.password" />
+        <button id="top_connect" class="connect reverse" type="submit"><p data-i18n="ns.menu:login.submit">Connect</p></button>
+    </form>
+		<div id="div_ads"></div>
+		<button id="top_subscribe" class="subscribe reverse" type="submit"><p data-i18n="ns.menu:subscribe">Subscribe</p></button>
+		<a id="top_logout" href="?logout=true">logout</a>
+    <div id="lang">
+    	<ul>
+        	<li>en</li>
+          <li data-lang="en">en</li>
+          <li data-lang="fr">fr</li>
+      </ul>
+    <!-- end lang --></div>
+    <div id="chat_open" data-i18n="ns.menu:contacts_online">
+			Contacts Online
+    </div>
+    <div id="chat_bar">
+    	<div id="chat_bar_contacts"></div>
+        <div id="chat_bar_msgs"></div>
+    	<input type="text" />
+    </div>
+  <!-- end menu_top --></div>
+  <div class="content">
+  	<form>
+        <div id="infos">
+        	<strong data-i18n="lookingfor">looking for</strong>:<br />
+            <div id="lookingfor_man" class="lookingfor_man_blank"></div>
+            <div id="lookingfor_woman" class="lookingfor_woman"></div>
+            <input id="lookingfor_value" type="hidden" name="gender" value="woman" data-bind="user.filters.personality.relationship.gender" />
+            <div id ="rate_age">
+            	<label for="amount">Ages between:</label>
+				<input type="text" id="age_min" data-bind="user.filters.profile.min.age" /> and 
+                <input type="text" id="age_max" data-bind="user.filters.profile.max.age" />
+				<div id="slider_agerange"></div>
+            <!-- end rate_age --></div>
+        <!-- end infos --></div>
+        <div id="navbar" class="edit_personality">
+            <div id="bt_personality" class="chidren_navbar">
+            	<a href="#personality"><span class="spanlinks"></span></a>
+                <a href="#personality" data-i18n="personality.title">Personality</a>
+            <!-- end bt_personality --></div>
+            <div id="bt_physique" class="chidren_navbar">
+            	<a href="#physique"><span class="spanlinks"></span></a>
+                <a href="#physique" data-i18n="physique.title">Physique</a>
+            <!-- end bt_physique --></div>
+        <!-- end navbar --></div>
+        <div id="navbar_landscape">
+    		<div data-i18n="personality.title" class="chidren_navbar">Personality</div>
+        	<div data-i18n="physique.title" class="chidren_navbar">Physique</div>
+		<!-- end navbar_landscape --></div>
+        <div id="tab_personality">
+                <div id="relationship">
+             	 <b data-i18n="personality.relationship.title">relationship</b>
+                 <div class="dropdown_menu">
+                    <ul>
+                        <li data-value="serious" data-i18n="personality.relationship.serious">Serious</li>
+                        <li data-value="serious" data-i18n="personality.relationship.serious">Serious</li>
+                        <li data-value="ephemeral" data-i18n="personality.relationship.ephemeral">Ephemeral</li>
+                        <li data-value="libertin" data-i18n="personality.relationship.libertin">Libertin</li>
+                   </ul>
+                   <input id="relationship_value" type="hidden" name="relationship" value="serious" data-bind="user.filters.personality.relationship.type" />
+                <!-- end .dropdown_menu --></div>
+            <!-- end color_skin --></div>
+            <div id="min_title">min</div>
+            <div id="max_title">max</div>
+            <br />
+            <hr />
+            <p><b data-i18n="personality.rate.party.title">Party</b></p>
+            <div id="rate_party_min">
+                <div id="party_0_min" class="party_0"></div>
+                <div id="party_1_min" class="party_1_blank"></div>
+                <div id="party_2_min" class="party_2_blank"></div>
+                <div id="party_3_min" class="party_3_blank"></div>
+                <p id="rate_party_min_text" data-i18n="personality.rate.party.lvl0">never</p>
+                <input id="rate_party_min_value" name="rate_party_min" title="rate party" type="hidden" value="0" data-bind="user.filters.personality.rate.min.party" />
+            <!-- end rate_party_min --></div>
+             <div id="rate_party_max">
+                <div id="party_0_max" class="party_0_blank"></div>
+                <div id="party_1_max" class="party_1"></div>
+                <div id="party_2_max" class="party_2"></div>
+                <div id="party_3_max" class="party_3"></div>
+                <p id="rate_party_max_text" data-i18n="personality.rate.party.lvl3">3 party a week or more</p>
+                <input id="rate_party_max_value" name="rate_party_max" title="rate party" type="hidden" value="3" data-bind="user.filters.personality.rate.max.party" />
+            <!-- end rate_party_max --></div> 
+            
+            <p class="margtop"><b data-i18n="personality.rate.alcohol.title">Alcohol</b></p>
+            <div id="rate_alcohol_min">
+                <div id="alcohol_0_min" class="alcohol_0"></div>
+                <div id="alcohol_1_min" class="alcohol_1_blank"></div>
+                <div id="alcohol_2_min" class="alcohol_2_blank"></div>
+                <div id="alcohol_3_min" class="alcohol_3_blank"></div>
+                <p id="rate_alcohol_min_text" data-i18n="personality.rate.alcohol.lvl0">never</p>
+                <input id="rate_alcohol_min_value" name="rate_alcohol_min" title="rate alcohol" type="hidden" value="0" data-bind="user.filters.personality.rate.min.alcohol" />
+            <!-- end rate_alcohol_min --></div>
+            <div id="rate_alcohol_max">
+                <div id="alcohol_0_max" class="alcohol_0_blank"></div>
+                <div id="alcohol_1_max" class="alcohol_1"></div>
+                <div id="alcohol_2_max" class="alcohol_2"></div>
+                <div id="alcohol_3_max" class="alcohol_3"></div>
+                <p id="rate_alcohol_max_text" data-i18n="personality.rate.alcohol.lvl3">lots</p>
+                <input id="rate_alcohol_max_value" name="rate_alcohol_max" title="rate alcohol" type="hidden" value="3" data-bind="user.filters.personality.rate.max.alcohol" />
+            <!-- end rate_alcohol_max --></div>
+            <p class="margtop"><b data-i18n="personality.rate.tobacco.title">tobacco</b></p>
+            <div id="rate_tobacco_min">
+                <div id="tobacco_0_min" class="tobacco_0"></div>
+                <div id="tobacco_1_min" class="tobacco_1_blank"></div>
+                <div id="tobacco_2_min" class="tobacco_2_blank"></div>
+                <div id="tobacco_3_min" class="tobacco_3_blank"></div>
+                <div id="tobacco_4_min" class="tobacco_4_blank"></div>
+                <p id="rate_tobacco_min_text" data-i18n="personality.rate.tobacco.lvl0">none</p>
+                <input id="rate_tobacco_min_value" name="rate_tobacco_min" title="rate tobacco" type="hidden" value="0" data-bind="user.filters.personality.rate.min.tobacco" />
+            <!-- end rate_tobacco_min --></div>
+            <div id="rate_tobacco_max">
+                <div id="tobacco_0_max" class="tobacco_0_blank"></div>
+                <div id="tobacco_1_max" class="tobacco_1"></div>
+                <div id="tobacco_2_max" class="tobacco_2"></div>
+                <div id="tobacco_3_max" class="tobacco_3"></div>
+                <div id="tobacco_4_max" class="tobacco_4"></div>
+                <p id="rate_tobacco_max_text" data-i18n="personality.rate.tobacco.lvl4">1 pack a day or more</p>
+                <input id="rate_tobacco_max_value" name="rate_tobacco_max" title="rate tobacco" type="hidden" value="4" data-bind="user.filters.personality.rate.max.tobacco" />
+            <!-- end rate_tobacco_min --></div>
+						<div id="driving_license">
+            	<p><b data-i18n="personality.driving_license.title">Driving License</b></p>
+                <div id="driving_license_car" class="driving_license_car_blank"></div>
+                <div id="driving_license_motorcycle" class="driving_license_motorcycle_blank"></div>
+                <p id="driving_license_text" data-i18n="personality.driving_license.none">none</p>
+                <input id="driving_license_value" name="driving_license" title="driving license" type="hidden" value="0" data-bind="user.profile.license" />
+          <!-- end driving_license --></div>
+					<div id="live_with">
+							<p><b data-i18n="personality.live_with.title">Live with</b></p>
+							<div id="live_w_parents" class="live_w_parents_blank"></div>
+							<div id="live_w_mates" class="live_w_mates_blank"></div>
+							<div id="live_alone" class="live_alone_woman"></div>
+							<p id="live_with_text" data-i18n="personality.live_with.alone">live alone</p>
+							<input id="live_with_value" name="live_with" title="live with" type="hidden" value="2" data-bind="user.profile.live_with" />
+					<!-- end live_with --></div>
+        <!-- end tab_personality --></div>
+        <div id="tab_physique">
+            <p><b data-i18n="physique.color.body.eyes">Eyes color</b></p>
+            <div id="squares_color_eyes" class="square_edit">
+            	<canvas id="square_color_eyes_blue" data-color="blue"></canvas>
+              	<canvas id="square_color_eyes_brown" data-color="brown"></canvas>
+               	<canvas id="square_color_eyes_green" data-color="green"></canvas>
+             <!-- end squares_color_eyes --></div>
+             <input id="color_eyes_value" type="hidden" name="eyes_color" value=""  data-bind="user.filters.physique.color.eyes" />
+            <p><b data-i18n="physique.color.body.skin">Skin color</b></p>
+            <div id="squares_color_skin" class="square_edit">
+             	<canvas id="square_color_skin_white" data-color="white"></canvas>
+              	<canvas id="square_color_skin_brown" data-color="brown"></canvas>
+               	<canvas id="square_color_skin_yellow" data-color="yellow"></canvas>
+               	<canvas id="square_color_skin_black" data-color="black"></canvas>
+             <!-- end squares_color_skin --></div>
+             <input id="color_skin_value" type="hidden" name="skin_color" value="" data-bind="user.filters.physique.color.skin" />
+             <p id="color_hair_title"><b data-i18n="physique.color.body.hair">Color Hair</b></p>
+             <div id="squares_color_hair" class="square_edit">
+             	<canvas id="square_color_hair_black" data-color="black"></canvas>
+              	<canvas id="square_color_hair_blond" data-color="blond"></canvas>
+               	<canvas id="square_color_hair_brown" data-color="brown"></canvas>
+               	<canvas id="square_color_hair_grey" data-color="grey"></canvas>
+                <canvas id="square_color_hair_white" data-color="white"></canvas>
+                <canvas id="square_color_hair_ginger" data-color="ginger"></canvas>
+             <!-- end squares_color_hair --></div>
+             <input id="color_hair_value" type="hidden" name="hair_color" value="" value="" data-bind="user.filters.physique.color.hair" />
+             <div id="min_title">min</div>
+             <div id="max_title">max</div>
+             <br />
+             <hr />
+             <p><b data-i18n="physique.rate.haircut.title">Haircut</b></p>
+             <div id="haircut_min">
+                <div id="rate_haircut_min">
+                    <div id="haircut_1_min" class="haircut_1"></div>
+                    <div id="haircut_2_min" class="haircut_2_blank"></div>
+                    <div id="haircut_3_min" class="haircut_3_blank"></div>
+                    <div id="haircut_4_min" class="haircut_4_blank"></div>
+                <!-- end rate_haircut --></div>
+                <input id="rate_haircut_min_value" name="rate_haircut_min" title="rate haircut" type="hidden" value="0" value="" data-bind="user.filters.physique.size.min.hair" />
+                <p id="rate_haircut_min_text" data-i18n="physique.rate.haircut.lvl1">bold</p>
+			 <!-- end haircut_min --></div>
+             <div id="haircut_max">
+                <div id="rate_haircut_max">
+                    <div id="haircut_1_max" class="haircut_1"></div>
+                    <div id="haircut_2_max" class="haircut_2"></div>
+                    <div id="haircut_3_max" class="haircut_3"></div>
+                    <div id="haircut_4_max" class="haircut_4"></div>
+                <!-- end rate_haircut --></div>
+                <input id="rate_haircut_max_value" name="rate_haircut_max" title="rate haircut" type="hidden" value="4" data-bind="user.filters.physique.size.max.hair" />
+                <p id="rate_haircut_max_text" data-i18n="physique.rate.haircut.lvl4">long</p>
+			 <!-- end haircut_max --></div>
+            <p><b data-i18n="physique.size.title">Silhouette</b></p>
+            <div id="silhouette_min">
+                <div class="silhouette_warper">
+                    <div id="silhouette_img_min" class="silhouette_woman"></div>
+                    <div id="slider_height_min"></div>
+                    <div id="slider_weight_min"></div>
+                <!-- end silhouette_warper --></div>
+                <input id="height_min" name="height_min" title="Height" type="text" data-bind="user.filters.physique.size.min.height" />m
+                <input id="weight_min" name="weight_min" title="Weight" type="text" data-bind="user.filters.physique.size.min.weight" />kg
+            <!-- end silhouette_min --></div>
+            
+			<div id="silhouette_max">
+                <div class="silhouette_warper">
+                    <div id="silhouette_img_max" class="silhouette_woman"></div>
+                    <div id="slider_height_max"></div>
+                    <div id="slider_weight_max"></div>
+                <!-- end silhouette_warper --></div>
+                <input id="height_max" name="height_max" title="Height" type="text" data-bind="user.filters.physique.size.max.height" />m
+                <input id="weight_max" name="weight_max" title="Weight" type="text" data-bind="user.filters.physique.size.max.weight" />kg
+            <!-- end silhouette_max --></div>
+		
+            <p style="margin-top: 400px;"><b data-i18n="physique.rate.piercing.title">Piercing</b></p>
+            <div id="rate_piercing_min">
+                <div id="piercing_0_min" class="piercing_0"></div>
+                <div id="piercing_1_min" class="piercing_1_blank"></div>
+                <div id="piercing_2_min" class="piercing_2_blank"></div>
+                <div id="piercing_3_min" class="piercing_3_blank"></div>
+                <p id="rate_piercing_min_text" data-i18n="physique.rate.piercing.lvl0">none</p>
+                <input id="rate_piercing_min_value" name="rate_piercing_min" title="rate piercing" type="hidden" value="0" data-bind="user.filters.physique.rate.min.piercing" />
+          <!-- end rate_piercing --></div>
+          <div id="rate_piercing_max">
+                <div id="piercing_0_max" class="piercing_0_blank"></div>
+                <div id="piercing_1_max" class="piercing_1"></div>
+                <div id="piercing_2_max" class="piercing_2"></div>
+                <div id="piercing_3_max" class="piercing_3"></div>
+                <p id="rate_piercing_max_text" data-i18n="physique.rate.piercing.lvl3">lots</p>
+                <input id="rate_piercing_max_value" name="rate_piercing_max" title="rate piercing" type="hidden" value="3" data-bind="user.filters.physique.rate.max.piercing" />
+          <!-- end rate_piercing --></div>
+            <p class="margtop"><b data-i18n="physique.rate.tatoo.title">Tatoo</b></p>
+      		<div id="rate_tatoo_min">
+                <div id="tatoo_0_min" class="tatoo_0"></div>
+                <div id="tatoo_1_min" class="tatoo_1_blank"></div>
+                <div id="tatoo_2_min" class="tatoo_2_blank"></div>
+                <div id="tatoo_3_min" class="tatoo_3_blank"></div>
+                <p id="rate_tatoo_min_text" data-i18n="physique.rate.tatoo.lvl0">none</p>
+                <input id="rate_tatoo_min_value" name="rate_tatoo_min" title="rate tatoo" type="hidden" value="0" data-bind="user.filters.physique.rate.min.tatoo" />
+          <!-- end rate_tatoo --></div>
+          <div id="rate_tatoo_max">
+                <div id="tatoo_0_max" class="tatoo_0_blank"></div>
+                <div id="tatoo_1_max" class="tatoo_1"></div>
+                <div id="tatoo_2_max" class="tatoo_2"></div>
+                <div id="tatoo_3_max" class="tatoo_3"></div>
+                <p id="rate_tatoo_max_text" data-i18n="physique.rate.tatoo.lvl3">lots</p>
+                <input id="rate_tatoo_max_value" name="rate_tatoo_max" title="rate tatoo" type="hidden" value="3" data-bind="user.filters.physique.rate.max.tatoo" />
+          <!-- end rate_tatoo --></div>
+        <!-- end tab_physique --></div>
+        <div style="clear:both;"></div>
+    </form>
+  <!-- end .content --></div>
+  <div class="footer">
+    <p>Copyright & co</p>
+    <!-- end .footer --></div>
+    <div id="menu" class="menu">
+  
+  	  <div class="ico_cancel menu_edit_child">
+    	<a href="filters.html" title="Cancel"><span class="spanlinks"></span></a>
+      <!-- end ico_cancel --></div>
+    
+      <div class="ico_save menu_edit_child">
+    	<a id="save" href="#" title="Save" data-i18n="general.submit">Save</a><a href="#" title="Register"><span class="spanlinks"></span></a>
+      <!-- end ico_save --></div>
+    
+  	  <div id="ico_home" class="menu_child" data-i18n="general.title">Edit</div>
+  
+  <!-- end menu --></div>
+<!-- end .container --></div>
+
+<script src="js/jquery.js"></script>
+<script src="js/i18next.js"></script>
+<script src="js/user.class.js"></script>
+<script src="js/communication.class.js"></script>
+<script src="js/lang.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/portrait_maker.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/preload.js"></script>
+<script src="js/rates.js"></script>
+<script src="js/rounded_corner_square.class.js"></script>
+<script src="js/silhouette_sliders.js"></script>
+<script src="js/doubleico_switcher.js"></script>
+<script src="js/bindings.js"></script>
+<script src="js/page.filters_edit.js"></script>
+</body>
+</html>
